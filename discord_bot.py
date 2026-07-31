@@ -1,10 +1,12 @@
 import os
 import json
-import discord
 import subprocess
+import discord
 
 from dotenv import load_dotenv
 from discord.ext import commands
+
+from leaderboard import top_ruiners, top_allies
 
 
 load_dotenv()
@@ -23,6 +25,7 @@ bot = commands.Bot(
 )
 
 
+
 @bot.event
 async def on_ready():
 
@@ -37,7 +40,9 @@ async def on_ready():
 
 
 def update_state():
+
     try:
+
         result = subprocess.run(
             ["git", "pull"],
             capture_output=True,
@@ -50,98 +55,97 @@ def update_state():
         if result.stderr:
             print(result.stderr)
 
+
     except Exception as e:
-        print(f"Git pull failed: {e}")
+
+        print(
+            f"Git pull failed: {e}"
+        )
+
+
 
 @bot.tree.command(
     name="top",
-    description="Show top Dota ruiners"
+    description="Show Dota leaderboards"
 )
 async def top(interaction: discord.Interaction):
 
     update_state()
 
-    with open("state.json") as f:
+
+    with open(
+        "state.json",
+        encoding="utf-8"
+    ) as f:
+
         state = json.load(f)
 
 
-        players = []
 
-    for p in state["players"].values():
-
-        games = p["games_together"]
-
-        if games:
-            players.append(
-                {
-                    "name": p["nickname"],
-                    "guilty": p["guilty_count"],
-                    "games": games
-                }
-            )
-
-    # ----------------------------
-    # TOP RUINERS
-    # Sort by total ruined games
-    # ----------------------------
-
-    top_ruiners = sorted(
-        players,
-        key=lambda x: (
-            x["guilty"],
-            x["guilty"] / x["games"]
-        ),
-        reverse=True
+    ruiners = top_ruiners(
+        state,
+        limit=10
     )
 
-    # ----------------------------
-    # MOST PLAYED ALLIES
-    # Sort by total games together
-    # ----------------------------
 
-    most_played = sorted(
-        players,
-        key=lambda x: x["games"],
-        reverse=True
+    allies = top_allies(
+        state,
+        limit=10
     )
+
+
 
     msg = "🏆 **TOP RUINERS**\n\n"
 
-    if top_ruiners:
 
-        for i, p in enumerate(top_ruiners[:10], 1):
+    if ruiners:
 
-            percent = p["guilty"] / p["games"] * 100
+        for i, p in enumerate(ruiners, 1):
 
             msg += (
                 f"**{i}. {p['name']}**\n"
                 f"💀 Ruined: **{p['guilty']}** "
-                f"({percent:.1f}% of {p['games']} games)\n\n"
+                f"({p['percent']:.1f}% "
+                f"of {p['games']} games)\n\n"
             )
 
+
     else:
+
         msg += "No data.\n"
 
-    msg += "\n━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+
+    msg += (
+        "\n━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    )
+
 
     msg += "🤝 **MOST PLAYED ALLIES**\n\n"
 
-    if most_played:
 
-        for i, p in enumerate(most_played[:5], 1):
 
-            percent = p["guilty"] / p["games"] * 100
+    if allies:
+
+        for i, p in enumerate(allies, 1):
 
             msg += (
                 f"**{i}. {p['name']}**\n"
-                f"🎮 Games: **{p['games']}** "
-                f"({p['guilty']} ruined • {percent:.1f}%)\n\n"
+                f"🎮 Games together: **{p['games']}**\n"
+                f"💀 Ruined: {p['guilty']} "
+                f"({p['percent']:.1f}%)\n\n"
             )
 
+
     else:
+
         msg += "No data."
 
-    await interaction.response.send_message(msg)
+
+
+    await interaction.response.send_message(
+        msg
+    )
 
 
 

@@ -37,6 +37,8 @@ from typing import Any, Dict, List, Optional
 
 import requests
 
+from leaderboard import top_ruiners, top_allies
+
 # --------------------------------------------------------------------------
 # Config
 # --------------------------------------------------------------------------
@@ -410,76 +412,47 @@ def build_summary_embed(nickname: str, entry: dict) -> dict:
     }
 
 
-def build_ruiner_leaderboard(state: dict, limit: int = 10):
 
-    players=[]
+def build_leaderboard_embed(state):
 
-
-    for acc,data in state["players"].items():
-
-        games=data["games_together"]
-        guilty=data["guilty_count"]
+    ruiners = top_ruiners(state)
+    allies = top_allies(state)
 
 
-        if games == 0:
-            continue
+    ruiners_text = ""
+
+    for i,p in enumerate(ruiners,1):
+
+        ruiners_text += (
+            f"**{i}. {p['name']}**\n"
+            f"💀 {p['guilty']}/{p['games']} "
+            f"({p['percent']:.1f}%)\n\n"
+        )
 
 
-        percentage=(guilty/games)*100
+    allies_text = ""
 
+    for i,p in enumerate(allies,1):
 
-        players.append({
-
-            "nickname":data["nickname"],
-            "games":games,
-            "guilty":guilty,
-            "percentage":percentage
-
-        })
-
-
-    players.sort(
-        key=lambda x:x["percentage"],
-        reverse=True
-    )
-
-    return players[:limit]
-
-
-
-def build_top_ruiners_embed(state):
-
-    leaderboard = build_ruiner_leaderboard(state)
-
-
-    if not leaderboard:
-
-        text="No ruined games yet."
-
-    else:
-
-        lines=[]
-
-        for i,p in enumerate(leaderboard,1):
-
-            lines.append(
-                f"**{i}. {p['nickname']}**\n"
-                f"💀 Guilty: {p['guilty']}/{p['games']} "
-                f"({p['percentage']:.1f}%)"
-            )
-
-
-        text="\n\n".join(lines)
-
+        allies_text += (
+            f"**{i}. {p['name']}**\n"
+            f"🎮 {p['games']} games\n\n"
+        )
 
 
     return {
+        "title":"🏆 Dota Leaderboards",
 
-        "title":"🏆 Top Ruiners Leaderboard",
+        "description":
+            "💀 **TOP RUINERS**\n\n"
+            + ruiners_text
+            +
+            "\n━━━━━━━━━━━━━━\n\n"
+            +
+            "🤝 **TOP ALLIES**\n\n"
+            + allies_text,
 
-        "description":text,
-
-        "color":0x8B0000
+        "color":0x3498DB
     }
 
 # --------------------------------------------------------------------------
@@ -600,7 +573,7 @@ def process_match(state: dict, match_id: int) -> bool:
 
     # NEW MESSAGE AFTER EVERY GAME
 
-    leaderboard_embed = build_top_ruiners_embed(
+    leaderboard_embed = build_leaderboard_embed(
         state
     )
 
