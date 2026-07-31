@@ -1,13 +1,11 @@
 {
-  "last_match_id": 8921699248,
-  "pending_parse": [
-    8923188067
-  ],
+  "last_match_id": 8923188067,
+  "pending_parse": [],
   "players": {
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 50,
-      "losses_together": 23,
+      "games_together": 51,
+      "losses_together": 24,
       "guilty_count": 1
     },
     "190406808": {
@@ -18,8 +16,8 @@
     },
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 36,
-      "losses_together": 21,
+      "games_together": 37,
+      "losses_together": 22,
       "guilty_count": 7
     },
     "894763120": {
@@ -747,6 +745,24 @@
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 1
+    },
+    "894672944": {
+      "nickname": "Gutz ZYZZ Berserk alone kill",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "217628445": {
+      "nickname": "Пулеминетчица",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
+    },
+    "161148694": {
+      "nickname": "COOlCOLD",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
     }
   },
   "history": [
@@ -1575,6 +1591,42 @@
           "nickname": "monty",
           "hero": "Spectre",
           "guilt_probability": 0.028836526404053014
+        }
+      ]
+    },
+    {
+      "match_id": 8923188067,
+      "guilty": 217628445,
+      "players": [
+        {
+          "account_id": 217628445,
+          "nickname": "Пулеминетчица",
+          "hero": "Earth Spirit",
+          "guilt_probability": 0.4107940868004504
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Dazzle",
+          "guilt_probability": 0.27563577462645295
+        },
+        {
+          "account_id": 894672944,
+          "nickname": "Gutz ZYZZ Berserk alone kill",
+          "hero": "Phantom Lancer",
+          "guilt_probability": 0.21483862839306317
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Skywrath Mage",
+          "guilt_probability": 0.08203505755223023
+        },
+        {
+          "account_id": 161148694,
+          "nickname": "COOlCOLD",
+          "hero": "Pudge",
+          "guilt_probability": 0.01669645262780332
         }
       ]
     }
