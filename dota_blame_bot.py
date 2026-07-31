@@ -47,7 +47,7 @@ STEAM_ACCOUNT_ID = os.environ.get("STEAM_ACCOUNT_ID")
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 STATE_FILE = os.environ.get("STATE_FILE", "state.json")
 SUMMARY_EVERY = int(os.environ.get("SUMMARY_EVERY", "10"))
-RECENT_MATCHES_LIMIT = int(os.environ.get("RECENT_MATCHES_LIMIT", "5"))
+RECENT_MATCHES_LIMIT = int(os.environ.get("RECENT_MATCHES_LIMIT", "50"))
 OPENDOTA_API_KEY = os.environ.get("OPENDOTA_API_KEY")  # optional
 
 if not STEAM_ACCOUNT_ID or not DISCORD_WEBHOOK_URL:
