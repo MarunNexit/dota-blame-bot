@@ -1,6 +1,219 @@
 {
-  "last_match_id": 0,
+  "last_match_id": 8921699248,
   "pending_parse": [],
-  "players": {},
-  "history": []
+  "players": {
+    "1511648112": {
+      "nickname": "ZXC_GHOUL_SSS_DESTROYER",
+      "games_together": 1,
+      "guilty_count": 1
+    },
+    "492644756": {
+      "nickname": "BC",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "113508927": {
+      "nickname": "OldFox",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "291958958": {
+      "nickname": "ARES",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "430827275": {
+      "nickname": "Гур Мик Мик",
+      "games_together": 3,
+      "guilty_count": 0
+    },
+    "852680232": {
+      "nickname": "dodepchik",
+      "games_together": 3,
+      "guilty_count": 2
+    },
+    "1023777224": {
+      "nickname": "#СЕЛАДАЛА",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1674603636": {
+      "nickname": "tw/dwaykio",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "183695637": {
+      "nickname": "Kan1bal",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1246254007": {
+      "nickname": "сдох",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1204717699": {
+      "nickname": "monty",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1843297947": {
+      "nickname": "чакра",
+      "games_together": 1,
+      "guilty_count": 1
+    }
+  },
+  "history": [
+    {
+      "match_id": 8920882783,
+      "guilty": 1511648112,
+      "players": [
+        {
+          "account_id": 1511648112,
+          "nickname": "ZXC_GHOUL_SSS_DESTROYER",
+          "hero": "Huskar",
+          "guilt_probability": 0.6079499717592631
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Dark Seer",
+          "guilt_probability": 0.29883747357390755
+        },
+        {
+          "account_id": 492644756,
+          "nickname": "BC",
+          "hero": "Witch Doctor",
+          "guilt_probability": 0.04417143683983218
+        },
+        {
+          "account_id": 113508927,
+          "nickname": "OldFox",
+          "hero": "Silencer",
+          "guilt_probability": 0.025302225806468834
+        },
+        {
+          "account_id": 291958958,
+          "nickname": "ARES",
+          "hero": "Phantom Assassin",
+          "guilt_probability": 0.023738892020528438
+        }
+      ]
+    },
+    {
+      "match_id": 8921611927,
+      "guilty": 852680232,
+      "players": [
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Lich",
+          "guilt_probability": 0.2884858698690194
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Centaur Warrunner",
+          "guilt_probability": 0.231092532361557
+        },
+        {
+          "account_id": 1023777224,
+          "nickname": "#СЕЛАДАЛА",
+          "hero": "Nyx Assassin",
+          "guilt_probability": 0.19317205667961793
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Grimstroke",
+          "guilt_probability": 0.17001175620278294
+        },
+        {
+          "account_id": 1674603636,
+          "nickname": "tw/dwaykio",
+          "hero": "Queen of Pain",
+          "guilt_probability": 0.11723778488702272
+        }
+      ]
+    },
+    {
+      "match_id": 8921657430,
+      "guilty": 852680232,
+      "players": [
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "guilt_probability": 0.38966254430401653
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Sniper",
+          "guilt_probability": 0.30198136004493825
+        },
+        {
+          "account_id": 183695637,
+          "nickname": "Kan1bal",
+          "hero": "Muerta",
+          "guilt_probability": 0.16126637124705526
+        },
+        {
+          "account_id": 1246254007,
+          "nickname": "сдох",
+          "hero": "Shadow Fiend",
+          "guilt_probability": 0.07901892844087968
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Pudge",
+          "guilt_probability": 0.06807079596311015
+        }
+      ]
+    },
+    {
+      "match_id": 8921699248,
+      "guilty": 1843297947,
+      "players": [
+        {
+          "account_id": 1843297947,
+          "nickname": "чакра",
+          "hero": "Snapfire",
+          "guilt_probability": 0.46526488385978815
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Dazzle",
+          "guilt_probability": 0.1818275485219994
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Death Prophet",
+          "guilt_probability": 0.17318089461244512
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Ogre Magi",
+          "guilt_probability": 0.15089014660171424
+        },
+        {
+          "account_id": 1204717699,
+          "nickname": "monty",
+          "hero": "Spectre",
+          "guilt_probability": 0.028836526404053014
+        }
+      ]
+    }
+  ],
+  "_slot_cache": {
+    "8920882783": 0,
+    "8921551877": 128,
+    "8921611927": 0,
+    "8921657430": 128,
+    "8921699248": 2
+  }
 }
