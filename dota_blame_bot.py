@@ -134,8 +134,13 @@ def hero_name(hero_id: int) -> str:
 def default_state() -> dict:
     return {
         "last_match_id": 0,
-        "pending_parse": [],       # match_ids waiting on OpenDota to parse
-        "players": {},             # account_id (str) -> {nickname, games_together, guilty_count}
+        "pending_parse": [],
+
+        # player statistics
+        "players": {},
+
+        # every analyzed loss
+        "history": []
     }
 
 
@@ -405,31 +410,142 @@ def build_summary_embed(nickname: str, entry: dict) -> dict:
     }
 
 
+def build_ruiner_leaderboard(state: dict, limit: int = 10):
+
+    players=[]
+
+
+    for acc,data in state["players"].items():
+
+        games=data["games_together"]
+        guilty=data["guilty_count"]
+
+
+        if games == 0:
+            continue
+
+
+        percentage=(guilty/games)*100
+
+
+        players.append({
+
+            "nickname":data["nickname"],
+            "games":games,
+            "guilty":guilty,
+            "percentage":percentage
+
+        })
+
+
+    players.sort(
+        key=lambda x:x["percentage"],
+        reverse=True
+    )
+
+    return players[:limit]
+
+
+
+def build_top_ruiners_embed(state):
+
+    leaderboard = build_ruiner_leaderboard(state)
+
+
+    if not leaderboard:
+
+        text="No ruined games yet."
+
+    else:
+
+        lines=[]
+
+        for i,p in enumerate(leaderboard,1):
+
+            lines.append(
+                f"**{i}. {p['nickname']}**\n"
+                f"💀 Guilty: {p['guilty']}/{p['games']} "
+                f"({p['percentage']:.1f}%)"
+            )
+
+
+        text="\n\n".join(lines)
+
+
+
+    return {
+
+        "title":"🏆 Top Ruiners Leaderboard",
+
+        "description":text,
+
+        "color":0x8B0000
+    }
+
 # --------------------------------------------------------------------------
 # Counters
 # --------------------------------------------------------------------------
 
-def update_counters(state: dict, team: List[dict], guilty_account_id: Optional[int]) -> List[str]:
-    """Bumps games_together for every teammate (except me) and guilty_count
-    for the blamed one. Returns list of account_ids that just hit a multiple
-    of SUMMARY_EVERY, so we know who to post a summary for."""
+def update_counters(
+    state: dict,
+    team: List[dict],
+    analyzed: List[dict],
+    guilty_account_id: Optional[int],
+    match_id: int
+) -> List[str]:
+
     hit_milestone = []
+
+    # save match history
+    state["history"].append({
+        "match_id": match_id,
+        "guilty": guilty_account_id,
+        "players": [
+            {
+                "account_id": p.get("account_id"),
+                "nickname": p.get("nickname"),
+                "hero": p.get("hero"),
+                "guilt_probability": p.get("guilt_probability")
+            }
+            for p in analyzed
+        ]
+    })
+
+
     for p in team:
+
         acc = p.get("account_id")
+
         if not acc or acc == STEAM_ACCOUNT_ID:
             continue
+
+
         key = str(acc)
-        entry = state["players"].setdefault(key, {
-            "nickname": player_nickname(p),
-            "games_together": 0,
-            "guilty_count": 0,
-        })
-        entry["nickname"] = player_nickname(p)  # keep nickname fresh
+
+
+        entry = state["players"].setdefault(
+            key,
+            {
+                "nickname": player_nickname(p),
+                "games_together": 0,
+                "guilty_count": 0
+            }
+        )
+
+
+        entry["nickname"] = player_nickname(p)
+
         entry["games_together"] += 1
+
+
         if acc == guilty_account_id:
             entry["guilty_count"] += 1
+
+
         if entry["games_together"] % SUMMARY_EVERY == 0:
             hit_milestone.append(key)
+
+
     return hit_milestone
 
 
@@ -464,10 +580,34 @@ def process_match(state: dict, match_id: int) -> bool:
     analyzed = analyze_team(match, team)
     guilty = analyzed[0]
 
-    embed = build_match_embed(match, analyzed)
+
+    embed = build_match_embed(
+    match,
+    analyzed
+)
+
     post_to_discord(embed)
 
-    milestones = update_counters(state, team, guilty.get("account_id"))
+
+
+    milestones = update_counters(
+        state,
+        team,
+        analyzed,
+        guilty.get("account_id"),
+        match_id
+    )
+
+    # NEW MESSAGE AFTER EVERY GAME
+
+    leaderboard_embed = build_top_ruiners_embed(
+        state
+    )
+
+    post_to_discord(
+        leaderboard_embed
+    )
+
     for key in milestones:
         entry = state["players"][key]
         summary_embed = build_summary_embed(entry["nickname"], entry)
