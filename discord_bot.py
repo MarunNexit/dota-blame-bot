@@ -65,8 +65,7 @@ async def top(interaction: discord.Interaction):
         state = json.load(f)
 
 
-    players = []
-
+        players = []
 
     for p in state["players"].values():
 
@@ -81,8 +80,13 @@ async def top(interaction: discord.Interaction):
                 }
             )
 
+    # ----------------------------
+    # TOP RUINERS
+    # Sort by total ruined games
+    # ----------------------------
 
-    players.sort(
+    top_ruiners = sorted(
+        players,
         key=lambda x: (
             x["guilty"],
             x["guilty"] / x["games"]
@@ -90,22 +94,52 @@ async def top(interaction: discord.Interaction):
         reverse=True
     )
 
+    # ----------------------------
+    # MOST PLAYED ALLIES
+    # Sort by total games together
+    # ----------------------------
+
+    most_played = sorted(
+        players,
+        key=lambda x: x["games"],
+        reverse=True
+    )
 
     msg = "🏆 **TOP RUINERS**\n\n"
 
+    if top_ruiners:
 
-    for i, p in enumerate(players[:10], 1):
+        for i, p in enumerate(top_ruiners[:10], 1):
 
-        percent = (
-            p["guilty"] / p["games"] * 100
-        )
+            percent = p["guilty"] / p["games"] * 100
 
-        msg += (
-            f"**{i}. {p['name']}**\n"
-            f"💀 {p['guilty']}/{p['games']} "
-            f"({percent:.1f}%)\n\n"
-        )
+            msg += (
+                f"**{i}. {p['name']}**\n"
+                f"💀 Ruined: **{p['guilty']}** "
+                f"({percent:.1f}% of {p['games']} games)\n\n"
+            )
 
+    else:
+        msg += "No data.\n"
+
+    msg += "\n━━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+    msg += "🤝 **MOST PLAYED ALLIES**\n\n"
+
+    if most_played:
+
+        for i, p in enumerate(most_played[:5], 1):
+
+            percent = p["guilty"] / p["games"] * 100
+
+            msg += (
+                f"**{i}. {p['name']}**\n"
+                f"🎮 Games: **{p['games']}** "
+                f"({p['guilty']} ruined • {percent:.1f}%)\n\n"
+            )
+
+    else:
+        msg += "No data."
 
     await interaction.response.send_message(msg)
 
