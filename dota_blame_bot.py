@@ -447,34 +447,36 @@ def build_leaderboard_embed(state):
 def update_counters(
     state: dict,
     team: List[dict],
-    analyzed: List[dict],
+    analyzed: Optional[List[dict]],
     guilty_account_id: Optional[int],
-    match_id: int
+    match_id: int,
+    lost: bool
 ) -> List[str]:
 
     hit_milestone = []
 
-    # save match history
-    state["history"].append({
-        "match_id": match_id,
-        "guilty": guilty_account_id,
-        "players": [
-            {
-                "account_id": p.get("account_id"),
-                "nickname": p.get("nickname"),
-                "hero": p.get("hero"),
-                "guilt_probability": p.get("guilt_probability")
-            }
-            for p in analyzed
-        ]
-    })
+    # save history only for analyzed losses
+    if analyzed:
+        state["history"].append({
+            "match_id": match_id,
+            "guilty": guilty_account_id,
+            "players": [
+                {
+                    "account_id": p.get("account_id"),
+                    "nickname": p.get("nickname"),
+                    "hero": p.get("hero"),
+                    "guilt_probability": p.get("guilt_probability")
+                }
+                for p in analyzed
+            ]
+        })
 
 
     for p in team:
 
         acc = p.get("account_id")
 
-        if not acc or acc == STEAM_ACCOUNT_ID:
+        if not acc:
             continue
 
 
@@ -486,6 +488,7 @@ def update_counters(
             {
                 "nickname": player_nickname(p),
                 "games_together": 0,
+                "losses_together": 0,
                 "guilty_count": 0
             }
         )
@@ -493,10 +496,18 @@ def update_counters(
 
         entry["nickname"] = player_nickname(p)
 
+
+        # EVERY GAME
         entry["games_together"] += 1
 
 
-        if acc == guilty_account_id:
+        # ONLY LOSSES
+        if lost:
+            entry["losses_together"] += 1
+
+
+        # ONLY IF THIS PLAYER WAS BLAMED
+        if lost and guilty_account_id and acc == guilty_account_id:
             entry["guilty_count"] += 1
 
 
@@ -505,7 +516,6 @@ def update_counters(
 
 
     return hit_milestone
-
 
 # --------------------------------------------------------------------------
 # Main
@@ -530,11 +540,33 @@ def process_match(state: dict, match_id: int) -> bool:
         print(f"  couldn't locate our player in match {match_id}, skipping")
         return True  # nothing more we can do with this one
 
-    if not did_i_lose(match, my_player):
-        print(f"  match {match_id} was a win, skipping blame analysis")
+    team = get_team(match, my_player)
+
+    lost = did_i_lose(match, my_player)
+
+    if not lost:
+
+        milestones = update_counters(
+            state,
+            team,
+            analyzed=None,
+            guilty_account_id=None,
+            match_id=match_id,
+            lost=False
+        )
+
+        for key in milestones:
+            entry = state["players"][key]
+            summary_embed = build_summary_embed(
+                entry["nickname"],
+                entry
+            )
+            post_to_discord(summary_embed)
+
+        print(f"  match {match_id} was a win")
         return True
 
-    team = get_team(match, my_player)
+
     analyzed = analyze_team(match, team)
     guilty = analyzed[0]
 
@@ -553,7 +585,8 @@ def process_match(state: dict, match_id: int) -> bool:
         team,
         analyzed,
         guilty.get("account_id"),
-        match_id
+        match_id,
+        lost=True
     )
 
 
@@ -563,6 +596,7 @@ def process_match(state: dict, match_id: int) -> bool:
         post_to_discord(summary_embed)
 
     return True
+
 
 
 def main() -> None:
@@ -617,11 +651,8 @@ def main() -> None:
                 mid
             )
 
-
-        if not done:
+        if not done and mid not in state["pending_parse"]:
             state["pending_parse"].append(mid)
-
-
 
     if processed_any:
 

@@ -1,10 +1,12 @@
 def build_players(state):
+
     players = []
 
     for p in state["players"].values():
 
-        games = p["games_together"]
-        guilty = p["guilty_count"]
+        games = p.get("games_together", 0)
+        losses = p.get("losses_together", 0)
+        guilty = p.get("guilty_count", 0)
 
         if games == 0:
             continue
@@ -12,8 +14,9 @@ def build_players(state):
         players.append({
             "name": p["nickname"],
             "games": games,
+            "losses": losses,
             "guilty": guilty,
-            "percent": guilty / games * 100
+            "percent": guilty / losses * 100 if losses else 0
         })
 
     return players
@@ -27,8 +30,9 @@ def top_ruiners(state, limit=10):
     return sorted(
         players,
         key=lambda p: (
-            p["guilty"],     # total ruined games
-            p["percent"]     # tie breaker
+            p["percent"],
+            p["guilty"],
+            p["losses"]
         ),
         reverse=True
     )[:limit]
@@ -42,8 +46,8 @@ def top_allies(state, limit=10):
     return sorted(
         players,
         key=lambda p: (
-            p["games"],      # most games together
-            p["guilty"]      # tie breaker
+            p["games"],
+            p["losses"]
         ),
         reverse=True
     )[:limit]
@@ -67,8 +71,10 @@ def format_leaderboard(ruiners, allies):
 
             lines.append(
                 f"`#{i}` **{p['name']}** "
-                f"💀 {p['guilty']}/{p['games']} "
-                f"({p['percent']:.1f}%)"
+                f"💀 {p['guilty']} ruined "
+                f"❌ {p['losses']} losses "
+                f"🎮 {p['games']} games "
+                f"({p['percent']:.1f}% blame)"
             )
 
     else:
@@ -90,6 +96,7 @@ def format_leaderboard(ruiners, allies):
             lines.append(
                 f"`#{i}` **{p['name']}** "
                 f"🎮 {p['games']} games "
+                f"❌ {p['losses']} losses "
                 f"💀 {p['guilty']} ruined"
             )
 
