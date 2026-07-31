@@ -1,6 +1,359 @@
 {
-  "last_match_id": 0,
-  "pending_parse": [],
-  "players": {},
-  "history": []
+  "last_match_id": 8921699248,
+  "pending_parse": [
+    8897077928,
+    8897129033,
+    8898444277,
+    8898565974,
+    8898602853,
+    8899312204,
+    8899780516,
+    8899853619,
+    8901557647,
+    8907384743,
+    8907515377,
+    8907576775,
+    8907632536,
+    8907662647,
+    8907686115,
+    8908267383,
+    8908403716,
+    8908557859,
+    8908650368,
+    8910618293,
+    8910660248,
+    8910696491,
+    8910726413,
+    8910761997,
+    8912042339,
+    8913173114,
+    8913274441,
+    8913359242,
+    8913860917,
+    8913900659,
+    8913929749,
+    8913969611,
+    8915412767,
+    8916987172,
+    8917054594,
+    8917130781,
+    8917168048,
+    8919853620,
+    8920133733,
+    8920168851,
+    8920220640,
+    8920264630,
+    8920821107
+  ],
+  "players": {
+    "190406808": {
+      "nickname": "Lokent",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "852680232": {
+      "nickname": "dodepchik",
+      "games_together": 4,
+      "guilty_count": 3
+    },
+    "213754782": {
+      "nickname": "Демодекс",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1797957832": {
+      "nickname": "Ded",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1511648112": {
+      "nickname": "ZXC_GHOUL_SSS_DESTROYER",
+      "games_together": 1,
+      "guilty_count": 1
+    },
+    "492644756": {
+      "nickname": "BC",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "113508927": {
+      "nickname": "OldFox",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "291958958": {
+      "nickname": "ARES",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "430827275": {
+      "nickname": "Гур Мик Мик",
+      "games_together": 3,
+      "guilty_count": 0
+    },
+    "1023777224": {
+      "nickname": "#СЕЛАДАЛА",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1674603636": {
+      "nickname": "tw/dwaykio",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "183695637": {
+      "nickname": "Kan1bal",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1246254007": {
+      "nickname": "сдох",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1204717699": {
+      "nickname": "monty",
+      "games_together": 1,
+      "guilty_count": 0
+    },
+    "1843297947": {
+      "nickname": "чакра",
+      "games_together": 1,
+      "guilty_count": 1
+    }
+  },
+  "history": [
+    {
+      "match_id": 8897096783,
+      "guilty": 852680232,
+      "players": [
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Dazzle",
+          "guilt_probability": 0.6150197240739238
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Skywrath Mage",
+          "guilt_probability": 0.1457574785973147
+        },
+        {
+          "account_id": 213754782,
+          "nickname": "Демодекс",
+          "hero": "Tidehunter",
+          "guilt_probability": 0.09609452854163908
+        },
+        {
+          "account_id": 1797957832,
+          "nickname": "Ded",
+          "hero": "Kez",
+          "guilt_probability": 0.09426348854555265
+        },
+        {
+          "account_id": 190406808,
+          "nickname": "Lokent",
+          "hero": "Rubick",
+          "guilt_probability": 0.04886478024156963
+        }
+      ]
+    },
+    {
+      "match_id": 8920882783,
+      "guilty": 1511648112,
+      "players": [
+        {
+          "account_id": 1511648112,
+          "nickname": "ZXC_GHOUL_SSS_DESTROYER",
+          "hero": "Huskar",
+          "guilt_probability": 0.6079499717592631
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Dark Seer",
+          "guilt_probability": 0.29883747357390755
+        },
+        {
+          "account_id": 492644756,
+          "nickname": "BC",
+          "hero": "Witch Doctor",
+          "guilt_probability": 0.04417143683983218
+        },
+        {
+          "account_id": 113508927,
+          "nickname": "OldFox",
+          "hero": "Silencer",
+          "guilt_probability": 0.025302225806468834
+        },
+        {
+          "account_id": 291958958,
+          "nickname": "ARES",
+          "hero": "Phantom Assassin",
+          "guilt_probability": 0.023738892020528438
+        }
+      ]
+    },
+    {
+      "match_id": 8921611927,
+      "guilty": 852680232,
+      "players": [
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Lich",
+          "guilt_probability": 0.2884858698690194
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Centaur Warrunner",
+          "guilt_probability": 0.231092532361557
+        },
+        {
+          "account_id": 1023777224,
+          "nickname": "#СЕЛАДАЛА",
+          "hero": "Nyx Assassin",
+          "guilt_probability": 0.19317205667961793
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Grimstroke",
+          "guilt_probability": 0.17001175620278294
+        },
+        {
+          "account_id": 1674603636,
+          "nickname": "tw/dwaykio",
+          "hero": "Queen of Pain",
+          "guilt_probability": 0.11723778488702272
+        }
+      ]
+    },
+    {
+      "match_id": 8921657430,
+      "guilty": 852680232,
+      "players": [
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "guilt_probability": 0.38966254430401653
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Sniper",
+          "guilt_probability": 0.30198136004493825
+        },
+        {
+          "account_id": 183695637,
+          "nickname": "Kan1bal",
+          "hero": "Muerta",
+          "guilt_probability": 0.16126637124705526
+        },
+        {
+          "account_id": 1246254007,
+          "nickname": "сдох",
+          "hero": "Shadow Fiend",
+          "guilt_probability": 0.07901892844087968
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Pudge",
+          "guilt_probability": 0.06807079596311015
+        }
+      ]
+    },
+    {
+      "match_id": 8921699248,
+      "guilty": 1843297947,
+      "players": [
+        {
+          "account_id": 1843297947,
+          "nickname": "чакра",
+          "hero": "Snapfire",
+          "guilt_probability": 0.46526488385978815
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Dazzle",
+          "guilt_probability": 0.1818275485219994
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Death Prophet",
+          "guilt_probability": 0.17318089461244512
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Ogre Magi",
+          "guilt_probability": 0.15089014660171424
+        },
+        {
+          "account_id": 1204717699,
+          "nickname": "monty",
+          "hero": "Spectre",
+          "guilt_probability": 0.028836526404053014
+        }
+      ]
+    }
+  ],
+  "_slot_cache": {
+    "8897077928": 128,
+    "8897096783": 0,
+    "8897129033": 1,
+    "8898444277": 1,
+    "8898565974": 132,
+    "8898602853": 128,
+    "8899312204": 129,
+    "8899722664": 3,
+    "8899780516": 131,
+    "8899853619": 3,
+    "8901557647": 132,
+    "8907384743": 3,
+    "8907515377": 128,
+    "8907576775": 129,
+    "8907632536": 128,
+    "8907662647": 131,
+    "8907686115": 3,
+    "8908267383": 4,
+    "8908403716": 132,
+    "8908557859": 1,
+    "8908650368": 2,
+    "8910618293": 132,
+    "8910660248": 132,
+    "8910696491": 2,
+    "8910726413": 4,
+    "8910761997": 129,
+    "8912042339": 4,
+    "8913173114": 1,
+    "8913274441": 131,
+    "8913359242": 130,
+    "8913860917": 1,
+    "8913900659": 4,
+    "8913929749": 4,
+    "8913969611": 131,
+    "8915412767": 0,
+    "8916987172": 2,
+    "8917054594": 130,
+    "8917130781": 2,
+    "8917168048": 130,
+    "8919853620": 3,
+    "8920133733": 128,
+    "8920168851": 0,
+    "8920220640": 0,
+    "8920264630": 2,
+    "8920821107": 132,
+    "8920882783": 0,
+    "8921551877": 128,
+    "8921611927": 0,
+    "8921657430": 128,
+    "8921699248": 2
+  }
 }
