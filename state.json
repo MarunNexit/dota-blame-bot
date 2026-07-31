@@ -1,12 +1,10 @@
 {
-  "last_match_id": 8923188067,
-  "pending_parse": [
-    8923223740
-  ],
+  "last_match_id": 8923223740,
+  "pending_parse": [],
   "players": {
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 51,
+      "games_together": 52,
       "losses_together": 24,
       "guilty_count": 1
     },
@@ -18,7 +16,7 @@
     },
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 37,
+      "games_together": 38,
       "losses_together": 22,
       "guilty_count": 7
     },
@@ -764,6 +762,24 @@
       "nickname": "COOlCOLD",
       "games_together": 1,
       "losses_together": 1,
+      "guilty_count": 0
+    },
+    "89784783": {
+      "nickname": "VTT",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "117753988": {
+      "nickname": "Linnich",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "160833493": {
+      "nickname": "( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)",
+      "games_together": 1,
+      "losses_together": 0,
       "guilty_count": 0
     }
   },
