@@ -30,7 +30,6 @@ def top_ruiners(state, limit=10):
     return sorted(
         players,
         key=lambda p: (
-            p["percent"],
             p["guilty"],
             p["losses"]
         ),
