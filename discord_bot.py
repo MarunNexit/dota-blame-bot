@@ -6,8 +6,11 @@ import discord
 from dotenv import load_dotenv
 from discord.ext import commands
 
-from leaderboard import top_ruiners, top_allies
-
+from leaderboard import (
+    top_ruiners,
+    top_allies,
+    format_leaderboard
+)
 
 load_dotenv()
 
@@ -94,58 +97,21 @@ async def top(interaction: discord.Interaction):
     )
 
 
-
-    msg = "🏆 **TOP RUINERS**\n\n"
-
-
-    if ruiners:
-
-        for i, p in enumerate(ruiners, 1):
-
-            msg += (
-                f"**{i}. {p['name']}**\n"
-                f"💀 Ruined: **{p['guilty']}** "
-                f"({p['percent']:.1f}% "
-                f"of {p['games']} games)\n\n"
-            )
-
-
-    else:
-
-        msg += "No data.\n"
-
-
-
-    msg += (
-        "\n━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    msg = format_leaderboard(
+        ruiners,
+        allies
     )
 
-
-    msg += "🤝 **MOST PLAYED ALLIES**\n\n"
-
-
-
-    if allies:
-
-        for i, p in enumerate(allies, 1):
-
-            msg += (
-                f"**{i}. {p['name']}**\n"
-                f"🎮 Games together: **{p['games']}**\n"
-                f"💀 Ruined: {p['guilty']} "
-                f"({p['percent']:.1f}%)\n\n"
-            )
-
-
-    else:
-
-        msg += "No data."
-
-
+    embed = discord.Embed(
+        title="🏆 Dota Leaderboards",
+        description=msg,
+        color=0x3498DB
+    )
 
     await interaction.response.send_message(
-        msg
+        embed=embed
     )
+
 
 
 

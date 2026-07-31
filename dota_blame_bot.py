@@ -6,7 +6,7 @@ What it does, once per run:
   1. Loads state.json (last processed match, retry queue, per-player counters).
   2. Retries any matches that were queued for parsing last time.
   3. Fetches your recent matches from OpenDota.
-  4. For every match newer than the last one seen:
+  4. For every match newer than the last successfully processed match:
        - skip it if it's not a loss (we only assign blame on losses)
        - if OpenDota hasn't parsed it yet, request a parse and queue a retry
        - otherwise, run the analysis and post an embed to Discord
@@ -37,7 +37,11 @@ from typing import Any, Dict, List, Optional
 
 import requests
 
-from leaderboard import top_ruiners, top_allies
+from leaderboard import (
+    top_ruiners,
+    top_allies,
+    format_leaderboard
+)
 
 # --------------------------------------------------------------------------
 # Config
@@ -415,45 +419,26 @@ def build_summary_embed(nickname: str, entry: dict) -> dict:
 
 def build_leaderboard_embed(state):
 
-    ruiners = top_ruiners(state)
-    allies = top_allies(state)
+    ruiners = top_ruiners(
+        state,
+        limit=10
+    )
 
-
-    ruiners_text = ""
-
-    for i,p in enumerate(ruiners,1):
-
-        ruiners_text += (
-            f"**{i}. {p['name']}**\n"
-            f"💀 {p['guilty']}/{p['games']} "
-            f"({p['percent']:.1f}%)\n\n"
-        )
-
-
-    allies_text = ""
-
-    for i,p in enumerate(allies,1):
-
-        allies_text += (
-            f"**{i}. {p['name']}**\n"
-            f"🎮 {p['games']} games\n\n"
-        )
+    allies = top_allies(
+        state,
+        limit=10
+    )
 
 
     return {
-        "title":"🏆 Dota Leaderboards",
-
-        "description":
-            "💀 **TOP RUINERS**\n\n"
-            + ruiners_text
-            +
-            "\n━━━━━━━━━━━━━━\n\n"
-            +
-            "🤝 **TOP ALLIES**\n\n"
-            + allies_text,
-
-        "color":0x3498DB
+        "title": "🏆 Dota Leaderboards",
+        "description": format_leaderboard(
+            ruiners,
+            allies
+        ),
+        "color": 0x3498DB
     }
+
 
 # --------------------------------------------------------------------------
 # Counters
@@ -571,15 +556,6 @@ def process_match(state: dict, match_id: int) -> bool:
         match_id
     )
 
-    # NEW MESSAGE AFTER EVERY GAME
-
-    leaderboard_embed = build_leaderboard_embed(
-        state
-    )
-
-    post_to_discord(
-        leaderboard_embed
-    )
 
     for key in milestones:
         entry = state["players"][key]
@@ -593,14 +569,19 @@ def main() -> None:
     state = load_state()
     state.setdefault("_slot_cache", {})
 
+    processed_any = False
+
     # 1) retry anything still waiting on OpenDota's parser
     still_pending = []
     for mid in state.get("pending_parse", []):
         print(f"Retrying pending match {mid}")
+
         if not process_match(state, mid):
             still_pending.append(mid)
         else:
+            processed_any = True
             state["last_match_id"] = max(state["last_match_id"], mid)
+
     state["pending_parse"] = still_pending
 
     # 2) look for new matches
@@ -610,14 +591,48 @@ def main() -> None:
 
     if not new_matches:
         print("No new matches.")
+
     for m in new_matches:
+
         mid = m["match_id"]
+
         state["_slot_cache"][str(mid)] = m.get("player_slot")
+
         print(f"Processing match {mid}...")
-        done = process_match(state, mid)
-        state["last_match_id"] = max(state["last_match_id"], mid)
+
+
+        done = process_match(
+            state,
+            mid
+        )
+
+
+        if done:
+            processed_any = True
+
+
+        if done:
+            state["last_match_id"] = max(
+                state["last_match_id"],
+                mid
+            )
+
+
         if not done:
             state["pending_parse"].append(mid)
+
+
+
+    if processed_any:
+
+        leaderboard_embed = build_leaderboard_embed(
+            state
+        )
+
+        post_to_discord(
+            leaderboard_embed
+        )
+
 
     # trim slot cache so state.json doesn't grow forever
     keep_ids = {str(m["match_id"]) for m in recent} | set(state["pending_parse"])
