@@ -39,7 +39,6 @@ jobs:
         run: python dota_blame_bot.py
 
       - name: Commit updated state
-              - name: Commit updated state
         run: |
           git config user.name "dota-blame-bot"
           git config user.email "actions@users.noreply.github.com"
