@@ -39,20 +39,37 @@ jobs:
         run: python dota_blame_bot.py
 
       - name: Commit updated state
+              - name: Commit updated state
         run: |
           git config user.name "dota-blame-bot"
           git config user.email "actions@users.noreply.github.com"
 
-          # Make sure we're up to date with the remote first.
-          git pull --rebase origin main
+          echo "=== Git status before commit ==="
+          git status
 
-          # Stage the updated state file.
+          # Add changed state file
           git add state.json
 
-          # Only commit if state.json actually changed.
-          if ! git diff --cached --quiet; then
-            git commit -m "Update state [skip ci]"
-            git push origin HEAD:main
-          else
+          # Stop if nothing changed
+          if git diff --cached --quiet; then
             echo "No state changes to commit."
+            exit 0
           fi
+
+          # Commit changes
+          git commit -m "Update state [skip ci]"
+
+          echo "=== Git status after commit ==="
+          git status
+
+          # Update remote information
+          git fetch origin
+
+          # Rebase our commit on the latest main branch
+          git rebase origin/main
+
+          echo "=== Git status before push ==="
+          git status
+
+          # Push commit
+          git push origin HEAD:main
