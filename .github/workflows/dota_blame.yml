@@ -42,11 +42,17 @@ jobs:
         run: |
           git config user.name "dota-blame-bot"
           git config user.email "actions@users.noreply.github.com"
+
+          # Make sure we're up to date with the remote first.
+          git pull --rebase origin main
+
+          # Stage the updated state file.
           git add state.json
+
+          # Only commit if state.json actually changed.
           if ! git diff --cached --quiet; then
             git commit -m "Update state [skip ci]"
-            git pull --rebase
-            git push
+            git push origin HEAD:main
           else
             echo "No state changes to commit."
           fi
