@@ -19,6 +19,10 @@ This is meant to be run on a schedule (e.g. GitHub Actions cron) as a
 one-shot script, not a long-running process. It talks to Discord via a
 webhook, not a live bot connection.
 
+The actual blame-scoring logic (role detection, draft analysis, lane
+outcome, per-role weighted scoring) lives in blame_calculator.py so it can
+be tuned independently of the fetch/state/posting plumbing here.
+
 Environment variables (see README.md):
   STEAM_ACCOUNT_ID       - your 32-bit Dota/Steam account id (required)
   DISCORD_WEBHOOK_URL    - Discord webhook URL to post to (required)
@@ -29,7 +33,6 @@ Environment variables (see README.md):
 """
 
 import json
-import math
 import os
 import sys
 import time
@@ -41,6 +44,12 @@ from leaderboard import (
     top_ruiners,
     top_allies,
     format_leaderboard
+)
+
+from blame_calculator import (
+    analyze_team,
+    build_facts,
+    player_nickname,
 )
 
 # --------------------------------------------------------------------------
@@ -209,154 +218,12 @@ def get_team(match: dict, my_player: dict) -> List[dict]:
     ]
 
 
-def player_nickname(p: dict) -> str:
-    name = p.get("personaname")
-    if name:
-        return name
-    acc = p.get("account_id")
-    if acc:
-        return f"Anonymous#{acc}"
-    return f"Anonymous (hidden profile)"
-
-
-def early_death_count(p: dict, cutoff_seconds: int = 600) -> int:
-    """Count deaths that happened before `cutoff_seconds` using life_state,
-    if OpenDota gave us that timeline. Returns -1 if unavailable."""
-    life_state = p.get("life_state")
-    if not life_state:
-        return -1
-    count = 0
-    was_alive = True
-    for second, state in enumerate(life_state):
-        if second > cutoff_seconds:
-            break
-        dead = state == 1
-        if dead and was_alive:
-            count += 1
-        was_alive = not dead
-    return count
-
-
-# --------------------------------------------------------------------------
-# Blame analysis
-# --------------------------------------------------------------------------
-
-def safe_div(a: float, b: float) -> float:
-    return a / b if b else 0.0
-
-
-def analyze_team(match: dict, team: List[dict]) -> List[dict]:
-    """Returns a list of dicts, one per teammate, with computed features,
-    a 0-100 'badness' score, and a normalized guilt probability."""
-    duration_min = max(1.0, match.get("duration", 0) / 60.0)
-
-    team_kills = sum(p.get("kills", 0) for p in team) or 1
-    team_gpm = sum(p.get("gold_per_min", 0) for p in team) or 1
-    team_dmg = sum(p.get("hero_damage", 0) for p in team) or 1
-    team_networth = sum(p.get("net_worth", p.get("total_gold", 0)) for p in team) or 1
-    avg_gpm = team_gpm / len(team)
-
-    analyzed = []
-    for p in team:
-        kills = p.get("kills", 0)
-        deaths = p.get("deaths", 0)
-        assists = p.get("assists", 0)
-        gpm = p.get("gold_per_min", 0)
-        hero_damage = p.get("hero_damage", 0)
-        net_worth = p.get("net_worth", p.get("total_gold", 0))
-        obs = p.get("obs_placed", 0)
-        sen = p.get("sen_placed", 0)
-        stuns = p.get("stuns", 0) or 0
-        buyback_count = len(p.get("buyback_log", []) or [])
-        early_deaths = early_death_count(p)
-
-        kill_participation = safe_div(kills + assists, team_kills)
-        gpm_share = safe_div(gpm, team_gpm)
-        dmg_share = safe_div(hero_damage, team_dmg)
-        networth_share = safe_div(net_worth, team_networth)
-        death_rate = deaths / duration_min
-
-        is_support = gpm < avg_gpm and (obs + sen) > 0
-
-        # ---- badness score (higher = more to blame) ----
-        badness = 0.0
-
-        # Dying a lot, especially with little to show for it, is always bad.
-        badness += death_rate * 9.0
-        if kills + assists < deaths:
-            badness += 6.0
-
-        # Low participation in fights.
-        badness += (1.0 - kill_participation) * 18.0
-
-        # Early deaths (feeding the laning stage) hurt disproportionately.
-        if early_deaths >= 0:
-            badness += early_deaths * 5.0
-
-        if is_support:
-            # Supports are judged on utility, not gold/damage.
-            badness += max(0.0, (1.0 - safe_div(obs + sen, 8))) * 10.0
-            badness += max(0.0, (400 - stuns) / 100.0) * 2.0
-        else:
-            # Cores are judged on economy/damage share.
-            badness += max(0.0, (0.22 - gpm_share)) * 60.0
-            badness += max(0.0, (0.22 - dmg_share)) * 45.0
-            badness += max(0.0, (0.22 - networth_share)) * 40.0
-
-        # Repeated buybacks without a corresponding good outcome is a minor flag;
-        # we don't have "did it help" so just weight it lightly.
-        badness += buyback_count * 1.5
-
-        badness = max(0.0, badness)
-
-        analyzed.append({
-            "account_id": p.get("account_id"),
-            "nickname": player_nickname(p),
-            "hero": hero_name(p.get("hero_id", 0)),
-            "is_support": is_support,
-            "kills": kills, "deaths": deaths, "assists": assists,
-            "gpm": gpm, "xpm": p.get("xp_per_min", 0),
-            "hero_damage": hero_damage,
-            "net_worth": net_worth,
-            "kill_participation": kill_participation,
-            "gpm_share": gpm_share,
-            "dmg_share": dmg_share,
-            "networth_share": networth_share,
-            "obs_placed": obs, "sen_placed": sen,
-            "stuns": round(stuns, 1),
-            "early_deaths": early_deaths,
-            "buyback_count": buyback_count,
-            "badness": badness,
-        })
-
-    # Softmax the badness scores into "guilt probabilities" that sum to 1.
-    scores = [a["badness"] for a in analyzed]
-    m = max(scores) if scores else 0.0
-    exps = [math.exp((s - m) * 0.12) for s in scores]  # lower = more even spread
-    total = sum(exps) or 1.0
-    for a, e in zip(analyzed, exps):
-        a["guilt_probability"] = e / total
-
-    analyzed.sort(key=lambda a: a["guilt_probability"], reverse=True)
-    return analyzed
-
-
-def build_facts(a: dict) -> List[str]:
-    facts = []
-    facts.append(f"KDA {a['kills']}/{a['deaths']}/{a['assists']} "
-                  f"(kill participation {a['kill_participation']*100:.0f}%)")
-    if a["is_support"]:
-        facts.append(f"Wards: {a['obs_placed']} obs / {a['sen_placed']} sen, "
-                      f"{a['stuns']:.0f}s of stuns")
-    else:
-        facts.append(f"GPM {a['gpm']} ({a['gpm_share']*100:.0f}% of team), "
-                      f"hero dmg share {a['dmg_share']*100:.0f}%, "
-                      f"net worth share {a['networth_share']*100:.0f}%")
-    if a["early_deaths"] >= 0:
-        facts.append(f"Died {a['early_deaths']}x before the 10 minute mark")
-    if a["buyback_count"]:
-        facts.append(f"Used buyback {a['buyback_count']}x")
-    return facts
+def get_enemy_team(match: dict, my_player: dict) -> List[dict]:
+    my_radiant = is_radiant_slot(my_player["player_slot"])
+    return [
+        p for p in match.get("players", [])
+        if is_radiant_slot(p["player_slot"]) != my_radiant
+    ]
 
 
 # --------------------------------------------------------------------------
@@ -465,6 +332,7 @@ def update_counters(
                     "account_id": p.get("account_id"),
                     "nickname": p.get("nickname"),
                     "hero": p.get("hero"),
+                    "role": p.get("role"),
                     "guilt_probability": p.get("guilt_probability")
                 }
                 for p in analyzed
@@ -541,6 +409,7 @@ def process_match(state: dict, match_id: int) -> bool:
         return True  # nothing more we can do with this one
 
     team = get_team(match, my_player)
+    enemy_team = get_enemy_team(match, my_player)
 
     lost = did_i_lose(match, my_player)
 
@@ -567,7 +436,7 @@ def process_match(state: dict, match_id: int) -> bool:
         return True
 
 
-    analyzed = analyze_team(match, team)
+    analyzed = analyze_team(match, team, enemy_team, hero_name_fn=hero_name)
     guilty = analyzed[0]
 
 
