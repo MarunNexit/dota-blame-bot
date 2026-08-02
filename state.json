@@ -1,26 +1,24 @@
 {
-  "last_match_id": 8926481751,
-  "pending_parse": [
-    8926559480
-  ],
+  "last_match_id": 8926559480,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 42,
-      "losses_together": 23,
+      "games_together": 43,
+      "losses_together": 24,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 59,
-      "losses_together": 25,
+      "games_together": 60,
+      "losses_together": 26,
       "guilty_count": 3
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 30,
-      "losses_together": 15,
-      "guilty_count": 8
+      "games_together": 31,
+      "losses_together": 16,
+      "guilty_count": 9
     },
     "358624926": {
       "nickname": "oпep yпaл нaмoчeнный",
@@ -806,6 +804,18 @@
       "nickname": "KpyTou_4EJIoBEK",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "911679283": {
+      "nickname": "Soularise",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1680236079": {
+      "nickname": "Казимир Дабстеп",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -1832,6 +1842,47 @@
           "hero": "Wraith King",
           "role": "carry",
           "guilt_probability": 0.027926153840107774
+        }
+      ]
+    },
+    {
+      "match_id": 8926559480,
+      "guilty": 430827275,
+      "players": [
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Sniper",
+          "role": "support_hard",
+          "guilt_probability": 0.6428504043026683
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "role": "support_soft",
+          "guilt_probability": 0.20194588837451466
+        },
+        {
+          "account_id": 1680236079,
+          "nickname": "Казимир Дабстеп",
+          "hero": "Invoker",
+          "role": "mid",
+          "guilt_probability": 0.06434541295243729
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Tidehunter",
+          "role": "offlane",
+          "guilt_probability": 0.05057774679056555
+        },
+        {
+          "account_id": 911679283,
+          "nickname": "Soularise",
+          "hero": "Lifestealer",
+          "role": "carry",
+          "guilt_probability": 0.04028054757981424
         }
       ]
     }
