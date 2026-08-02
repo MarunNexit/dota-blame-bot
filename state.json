@@ -1,25 +1,23 @@
 {
-  "last_match_id": 8926402249,
-  "pending_parse": [
-    8926481751
-  ],
+  "last_match_id": 8926481751,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 41,
-      "losses_together": 22,
+      "games_together": 42,
+      "losses_together": 23,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 58,
-      "losses_together": 24,
+      "games_together": 59,
+      "losses_together": 25,
       "guilty_count": 3
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 29,
-      "losses_together": 14,
+      "games_together": 30,
+      "losses_together": 15,
       "guilty_count": 8
     },
     "358624926": {
@@ -84,15 +82,15 @@
     },
     "190406808": {
       "nickname": "Lokent",
-      "games_together": 18,
-      "losses_together": 6,
+      "games_together": 19,
+      "losses_together": 7,
       "guilty_count": 1
     },
     "257278885": {
       "nickname": "Arukdelon",
-      "games_together": 15,
-      "losses_together": 5,
-      "guilty_count": 2
+      "games_together": 16,
+      "losses_together": 6,
+      "guilty_count": 3
     },
     "110461402": {
       "nickname": "bablodable",
@@ -1791,6 +1789,47 @@
           "hero": "Magnus",
           "role": "offlane",
           "guilt_probability": 0.042751035380854716
+        }
+      ]
+    },
+    {
+      "match_id": 8926481751,
+      "guilty": 257278885,
+      "players": [
+        {
+          "account_id": 257278885,
+          "nickname": "Arukdelon",
+          "hero": "Spirit Breaker",
+          "role": "support_hard",
+          "guilt_probability": 0.7444341114642554
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "role": "support_soft",
+          "guilt_probability": 0.14490413519470605
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Sniper",
+          "role": "offlane",
+          "guilt_probability": 0.04515722810640864
+        },
+        {
+          "account_id": 190406808,
+          "nickname": "Lokent",
+          "hero": "Weaver",
+          "role": "mid",
+          "guilt_probability": 0.03757837139452221
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Wraith King",
+          "role": "carry",
+          "guilt_probability": 0.027926153840107774
         }
       ]
     }
