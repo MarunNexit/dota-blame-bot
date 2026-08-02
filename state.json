@@ -1,26 +1,24 @@
 {
-  "last_match_id": 8924863946,
-  "pending_parse": [
-    8925056317
-  ],
+  "last_match_id": 8925056317,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 38,
-      "losses_together": 21,
+      "games_together": 39,
+      "losses_together": 22,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 54,
-      "losses_together": 23,
+      "games_together": 55,
+      "losses_together": 24,
       "guilty_count": 3
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 25,
-      "losses_together": 13,
-      "guilty_count": 7
+      "games_together": 26,
+      "losses_together": 14,
+      "guilty_count": 8
     },
     "358624926": {
       "nickname": "oпep yпaл нaмoчeнный",
@@ -776,6 +774,18 @@
       "nickname": "140",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "78390050": {
+      "nickname": "sfg",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "69464053": {
+      "nickname": "Mallard",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -1720,6 +1730,47 @@
           "hero": "Sniper",
           "role": "offlane",
           "guilt_probability": 0.037853169149079005
+        }
+      ]
+    },
+    {
+      "match_id": 8925056317,
+      "guilty": 430827275,
+      "players": [
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Ogre Magi",
+          "role": "support_hard",
+          "guilt_probability": 0.72955613727393
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Dazzle",
+          "role": "support_soft",
+          "guilt_probability": 0.09502211530651576
+        },
+        {
+          "account_id": 69464053,
+          "nickname": "Mallard",
+          "hero": "Phantom Assassin",
+          "role": "mid",
+          "guilt_probability": 0.08843487569733843
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Night Stalker",
+          "role": "carry",
+          "guilt_probability": 0.04423583634136124
+        },
+        {
+          "account_id": 78390050,
+          "nickname": "sfg",
+          "hero": "Magnus",
+          "role": "offlane",
+          "guilt_probability": 0.042751035380854716
         }
       ]
     }
