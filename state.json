@@ -1,24 +1,22 @@
 {
-  "last_match_id": 8926559480,
-  "pending_parse": [
-    8926613127
-  ],
+  "last_match_id": 8926613127,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 43,
+      "games_together": 44,
       "losses_together": 24,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 60,
+      "games_together": 61,
       "losses_together": 26,
       "guilty_count": 3
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 31,
+      "games_together": 32,
       "losses_together": 16,
       "guilty_count": 9
     },
@@ -818,6 +816,18 @@
       "nickname": "Казимир Дабстеп",
       "games_together": 1,
       "losses_together": 1,
+      "guilty_count": 0
+    },
+    "63045613": {
+      "nickname": "Some Snakes can be your friend",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "53927880": {
+      "nickname": "Ekubo",
+      "games_together": 1,
+      "losses_together": 0,
       "guilty_count": 0
     }
   },
