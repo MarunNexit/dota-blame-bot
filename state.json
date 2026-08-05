@@ -1,26 +1,24 @@
 {
-  "last_match_id": 8931137881,
-  "pending_parse": [
-    8931299280
-  ],
+  "last_match_id": 8931299280,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 46,
-      "losses_together": 24,
+      "games_together": 47,
+      "losses_together": 25,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 64,
-      "losses_together": 26,
+      "games_together": 65,
+      "losses_together": 27,
       "guilty_count": 3
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 35,
-      "losses_together": 16,
-      "guilty_count": 9
+      "games_together": 36,
+      "losses_together": 17,
+      "guilty_count": 10
     },
     "358624926": {
       "nickname": "oпep yпaл нaмoчeнный",
@@ -872,6 +870,18 @@
       "nickname": "Dany",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "921168320": {
+      "nickname": "alwaysalone=(",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "191677561": {
+      "nickname": "АТАК ЛЕГКО ЧИТАТЬ",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -1939,6 +1949,47 @@
           "hero": "Lifestealer",
           "role": "carry",
           "guilt_probability": 0.04028054757981424
+        }
+      ]
+    },
+    {
+      "match_id": 8931299280,
+      "guilty": 430827275,
+      "players": [
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Enchantress",
+          "role": "support_hard",
+          "guilt_probability": 0.4532803803828782
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Ogre Magi",
+          "role": "support_soft",
+          "guilt_probability": 0.36557607358417765
+        },
+        {
+          "account_id": 191677561,
+          "nickname": "АТАК ЛЕГКО ЧИТАТЬ",
+          "hero": "Tidehunter",
+          "role": "offlane",
+          "guilt_probability": 0.08297966253745147
+        },
+        {
+          "account_id": 921168320,
+          "nickname": "alwaysalone=(",
+          "hero": "Invoker",
+          "role": "mid",
+          "guilt_probability": 0.0665667506622617
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Shadow Fiend",
+          "role": "carry",
+          "guilt_probability": 0.031597132833231095
         }
       ]
     }
