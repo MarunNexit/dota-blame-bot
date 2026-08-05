@@ -1,19 +1,17 @@
 {
-  "last_match_id": 8931299280,
-  "pending_parse": [
-    8931342722
-  ],
+  "last_match_id": 8931342722,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 47,
-      "losses_together": 25,
+      "games_together": 48,
+      "losses_together": 26,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 65,
-      "losses_together": 27,
+      "games_together": 66,
+      "losses_together": 28,
       "guilty_count": 3
     },
     "430827275": {
@@ -84,9 +82,9 @@
     },
     "190406808": {
       "nickname": "Lokent",
-      "games_together": 19,
-      "losses_together": 7,
-      "guilty_count": 1
+      "games_together": 20,
+      "losses_together": 8,
+      "guilty_count": 2
     },
     "257278885": {
       "nickname": "Arukdelon",
@@ -882,6 +880,18 @@
     },
     "191677561": {
       "nickname": "АТАК ЛЕГКО ЧИТАТЬ",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1168947982": {
+      "nickname": "кремация омск",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1053220613": {
+      "nickname": "MRAZ",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -1992,6 +2002,47 @@
           "hero": "Shadow Fiend",
           "role": "carry",
           "guilt_probability": 0.031597132833231095
+        }
+      ]
+    },
+    {
+      "match_id": 8931342722,
+      "guilty": 190406808,
+      "players": [
+        {
+          "account_id": 190406808,
+          "nickname": "Lokent",
+          "hero": "Dark Willow",
+          "role": "mid",
+          "guilt_probability": 0.37889546498703414
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Mirana",
+          "role": "support_hard",
+          "guilt_probability": 0.25619710068060914
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Ogre Magi",
+          "role": "support_soft",
+          "guilt_probability": 0.25164874504572604
+        },
+        {
+          "account_id": 1168947982,
+          "nickname": "кремация омск",
+          "hero": "Terrorblade",
+          "role": "carry",
+          "guilt_probability": 0.05923415576129405
+        },
+        {
+          "account_id": 1053220613,
+          "nickname": "MRAZ",
+          "hero": "Legion Commander",
+          "role": "offlane",
+          "guilt_probability": 0.0540245335253367
         }
       ]
     }
