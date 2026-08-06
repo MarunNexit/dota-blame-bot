@@ -1,26 +1,24 @@
 {
-  "last_match_id": 8931342722,
-  "pending_parse": [
-    8932850990
-  ],
+  "last_match_id": 8932850990,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 48,
-      "losses_together": 26,
+      "games_together": 49,
+      "losses_together": 27,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 66,
-      "losses_together": 28,
+      "games_together": 67,
+      "losses_together": 29,
       "guilty_count": 3
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 36,
-      "losses_together": 17,
-      "guilty_count": 10
+      "games_together": 37,
+      "losses_together": 18,
+      "guilty_count": 11
     },
     "358624926": {
       "nickname": "oпep yпaл нaмoчeнный",
@@ -894,6 +892,18 @@
     },
     "1053220613": {
       "nickname": "MRAZ",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1099637162": {
+      "nickname": "Dedoutside",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "203219839": {
+      "nickname": "Пацифист",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -2045,6 +2055,47 @@
           "hero": "Legion Commander",
           "role": "offlane",
           "guilt_probability": 0.0540245335253367
+        }
+      ]
+    },
+    {
+      "match_id": 8932850990,
+      "guilty": 430827275,
+      "players": [
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Ogre Magi",
+          "role": "support_hard",
+          "guilt_probability": 0.6920180106650159
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "role": "support_soft",
+          "guilt_probability": 0.16799259777823278
+        },
+        {
+          "account_id": 203219839,
+          "nickname": "Пацифист",
+          "hero": "Spirit Breaker",
+          "role": "mid",
+          "guilt_probability": 0.04996428261588481
+        },
+        {
+          "account_id": 1099637162,
+          "nickname": "Dedoutside",
+          "hero": "Night Stalker",
+          "role": "offlane",
+          "guilt_probability": 0.045595353302595
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Wraith King",
+          "role": "carry",
+          "guilt_probability": 0.04442975563827163
         }
       ]
     }
