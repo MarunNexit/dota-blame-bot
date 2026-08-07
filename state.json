@@ -1,26 +1,24 @@
 {
-  "last_match_id": 8932896538,
-  "pending_parse": [
-    8932952412
-  ],
+  "last_match_id": 8932952412,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 50,
-      "losses_together": 27,
+      "games_together": 51,
+      "losses_together": 28,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 68,
-      "losses_together": 29,
+      "games_together": 69,
+      "losses_together": 30,
       "guilty_count": 3
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 38,
-      "losses_together": 18,
-      "guilty_count": 11
+      "games_together": 39,
+      "losses_together": 19,
+      "guilty_count": 12
     },
     "358624926": {
       "nickname": "oпep yпaл нaмoчeнный",
@@ -920,6 +918,18 @@
       "nickname": "не чувствую ног",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1542039512": {
+      "nickname": "RH1NO",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "166610426": {
+      "nickname": "☯[DooM]_[GuY].exe™ス",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -2110,6 +2120,47 @@
           "hero": "Wraith King",
           "role": "carry",
           "guilt_probability": 0.04442975563827163
+        }
+      ]
+    },
+    {
+      "match_id": 8932952412,
+      "guilty": 430827275,
+      "players": [
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Grimstroke",
+          "role": "support_hard",
+          "guilt_probability": 0.43884107338833606
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Ogre Magi",
+          "role": "support_soft",
+          "guilt_probability": 0.3126904252993782
+        },
+        {
+          "account_id": 166610426,
+          "nickname": "☯[DooM]_[GuY].exe™ス",
+          "hero": "Outworld Destroyer",
+          "role": "mid",
+          "guilt_probability": 0.12306711199813493
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Juggernaut",
+          "role": "carry",
+          "guilt_probability": 0.06750007036707611
+        },
+        {
+          "account_id": 1542039512,
+          "nickname": "RH1NO",
+          "hero": "Elder Titan",
+          "role": "offlane",
+          "guilt_probability": 0.05790131894707479
         }
       ]
     }
