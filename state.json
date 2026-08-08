@@ -1,25 +1,23 @@
 {
-  "last_match_id": 8936035351,
-  "pending_parse": [
-    8936103858
-  ],
+  "last_match_id": 8936103858,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 54,
-      "losses_together": 30,
+      "games_together": 55,
+      "losses_together": 31,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 73,
-      "losses_together": 32,
-      "guilty_count": 3
+      "games_together": 74,
+      "losses_together": 33,
+      "guilty_count": 4
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 43,
-      "losses_together": 21,
+      "games_together": 44,
+      "losses_together": 22,
       "guilty_count": 14
     },
     "358624926": {
@@ -84,14 +82,14 @@
     },
     "190406808": {
       "nickname": "Lokent",
-      "games_together": 24,
-      "losses_together": 10,
+      "games_together": 25,
+      "losses_together": 11,
       "guilty_count": 2
     },
     "257278885": {
       "nickname": "Arukdelon",
-      "games_together": 19,
-      "losses_together": 8,
+      "games_together": 20,
+      "losses_together": 9,
       "guilty_count": 3
     },
     "110461402": {
@@ -2257,6 +2255,47 @@
           "hero": "Techies",
           "role": "mid",
           "guilt_probability": 0.0667110823696567
+        }
+      ]
+    },
+    {
+      "match_id": 8936103858,
+      "guilty": 1132291240,
+      "players": [
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Pudge",
+          "role": "support_hard",
+          "guilt_probability": 0.5309523420510432
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Crystal Maiden",
+          "role": "support_soft",
+          "guilt_probability": 0.21960608282544167
+        },
+        {
+          "account_id": 190406808,
+          "nickname": "Lokent",
+          "hero": "Largo",
+          "role": "mid",
+          "guilt_probability": 0.09385722509596935
+        },
+        {
+          "account_id": 257278885,
+          "nickname": "Arukdelon",
+          "hero": "Juggernaut",
+          "role": "carry",
+          "guilt_probability": 0.09317670093897702
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Alchemist",
+          "role": "offlane",
+          "guilt_probability": 0.06240764908856855
         }
       ]
     }
