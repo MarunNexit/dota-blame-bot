@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8932952412,
-  "pending_parse": [
-    8935824836
-  ],
+  "last_match_id": 8935824836,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,13 +10,13 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 69,
+      "games_together": 70,
       "losses_together": 30,
       "guilty_count": 3
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 39,
+      "games_together": 40,
       "losses_together": 19,
       "guilty_count": 12
     },
@@ -84,7 +82,7 @@
     },
     "190406808": {
       "nickname": "Lokent",
-      "games_together": 20,
+      "games_together": 21,
       "losses_together": 8,
       "guilty_count": 2
     },
@@ -932,6 +930,18 @@
       "nickname": "☯[DooM]_[GuY].exe™ス",
       "games_together": 1,
       "losses_together": 1,
+      "guilty_count": 0
+    },
+    "291974504": {
+      "nickname": "사신표월",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "180310381": {
+      "nickname": "Солевой",
+      "games_together": 1,
+      "losses_together": 0,
       "guilty_count": 0
     }
   },
