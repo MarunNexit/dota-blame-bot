@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8939477649,
-  "pending_parse": [
-    8941145525
-  ],
+  "last_match_id": 8941145525,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,7 +10,7 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 77,
+      "games_together": 78,
       "losses_together": 34,
       "guilty_count": 4
     },
@@ -966,6 +964,30 @@
     },
     "1511417781": {
       "nickname": "folk valley",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "448589467": {
+      "nickname": "emo16yo44kgneforlilxxx",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "889330594": {
+      "nickname": "Грузчик 1 год 2 мес",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "320326130": {
+      "nickname": "321",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "151250795": {
+      "nickname": "Piorav",
       "games_together": 1,
       "losses_together": 0,
       "guilty_count": 0
