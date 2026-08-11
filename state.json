@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8941145525,
-  "pending_parse": [
-    8941188293
-  ],
+  "last_match_id": 8941188293,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,9 +10,9 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 78,
-      "losses_together": 34,
-      "guilty_count": 4
+      "games_together": 79,
+      "losses_together": 35,
+      "guilty_count": 5
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
@@ -992,6 +990,30 @@
       "nickname": "Piorav",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "811780152": {
+      "nickname": "ещкере",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "59663986": {
+      "nickname": "(muted) Padre_Cohen (muted)",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1521903148": {
+      "nickname": "Freak",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1521770200": {
+      "nickname": "^^ ReLaX",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -2387,6 +2409,47 @@
           "hero": "Medusa",
           "role": "carry",
           "guilt_probability": 0.02177421886508016
+        }
+      ]
+    },
+    {
+      "match_id": 8941188293,
+      "guilty": 1132291240,
+      "players": [
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Skywrath Mage",
+          "role": "support_hard",
+          "guilt_probability": 0.6798147061894888
+        },
+        {
+          "account_id": 811780152,
+          "nickname": "ещкере",
+          "hero": "Undying",
+          "role": "support_soft",
+          "guilt_probability": 0.13339078532858156
+        },
+        {
+          "account_id": 1521903148,
+          "nickname": "Freak",
+          "hero": "Magnus",
+          "role": "mid",
+          "guilt_probability": 0.0834515078241872
+        },
+        {
+          "account_id": 1521770200,
+          "nickname": "^^ ReLaX",
+          "hero": "Alchemist",
+          "role": "offlane",
+          "guilt_probability": 0.08142063214938515
+        },
+        {
+          "account_id": 59663986,
+          "nickname": "(muted) Padre_Cohen (muted)",
+          "hero": "Lone Druid",
+          "role": "carry",
+          "guilt_probability": 0.0219223685083573
         }
       ]
     }
