@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8941188293,
-  "pending_parse": [
-    8942263483
-  ],
+  "last_match_id": 8942263483,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,8 +10,8 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 79,
-      "losses_together": 35,
+      "games_together": 80,
+      "losses_together": 36,
       "guilty_count": 5
     },
     "430827275": {
@@ -1014,6 +1012,30 @@
     },
     "1521770200": {
       "nickname": "^^ ReLaX",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1407196506": {
+      "nickname": "Пуська",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "290198888": {
+      "nickname": "⛧666satahur666⛧",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "471982896": {
+      "nickname": "Asura",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
+    },
+    "468487128": {
+      "nickname": "крутышка",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -2452,6 +2474,47 @@
           "hero": "Lone Druid",
           "role": "carry",
           "guilt_probability": 0.0219223685083573
+        }
+      ]
+    },
+    {
+      "match_id": 8942263483,
+      "guilty": 471982896,
+      "players": [
+        {
+          "account_id": 471982896,
+          "nickname": "Asura",
+          "hero": "Invoker",
+          "role": "support_hard",
+          "guilt_probability": 0.6466095867554289
+        },
+        {
+          "account_id": 1407196506,
+          "nickname": "Пуська",
+          "hero": "Dark Willow",
+          "role": "support_soft",
+          "guilt_probability": 0.20284245350788532
+        },
+        {
+          "account_id": 290198888,
+          "nickname": "⛧666satahur666⛧",
+          "hero": "Sven",
+          "role": "carry",
+          "guilt_probability": 0.058300188263060014
+        },
+        {
+          "account_id": 468487128,
+          "nickname": "крутышка",
+          "hero": "Necrophos",
+          "role": "offlane",
+          "guilt_probability": 0.05037592413824131
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Pangolier",
+          "role": "mid",
+          "guilt_probability": 0.04187184733538449
         }
       ]
     }
