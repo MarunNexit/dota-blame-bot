@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8942263483,
-  "pending_parse": [
-    8942354101
-  ],
+  "last_match_id": 8942354101,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,8 +10,8 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 80,
-      "losses_together": 36,
+      "games_together": 81,
+      "losses_together": 37,
       "guilty_count": 5
     },
     "430827275": {
@@ -1038,6 +1036,30 @@
     },
     "468487128": {
       "nickname": "крутышка",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "114613098": {
+      "nickname": "-yKuTaKe-",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
+    },
+    "162760691": {
+      "nickname": "щеневмерлик",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "346444201": {
+      "nickname": "Joseph",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1472404348": {
+      "nickname": "Вездесосущий",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -2517,6 +2539,47 @@
           "hero": "Pangolier",
           "role": "mid",
           "guilt_probability": 0.04187184733538449
+        }
+      ]
+    },
+    {
+      "match_id": 8942354101,
+      "guilty": 114613098,
+      "players": [
+        {
+          "account_id": 114613098,
+          "nickname": "-yKuTaKe-",
+          "hero": "Spirit Breaker",
+          "role": "support_hard",
+          "guilt_probability": 0.7074850275228386
+        },
+        {
+          "account_id": 346444201,
+          "nickname": "Joseph",
+          "hero": "Enchantress",
+          "role": "support_soft",
+          "guilt_probability": 0.0958379870153006
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Earthshaker",
+          "role": "offlane",
+          "guilt_probability": 0.09518107376960978
+        },
+        {
+          "account_id": 162760691,
+          "nickname": "щеневмерлик",
+          "hero": "Anti-Mage",
+          "role": "carry",
+          "guilt_probability": 0.051802492697137326
+        },
+        {
+          "account_id": 1472404348,
+          "nickname": "Вездесосущий",
+          "hero": "Lina",
+          "role": "mid",
+          "guilt_probability": 0.049693418995113786
         }
       ]
     }
