@@ -1,8 +1,6 @@
 {
   "last_match_id": 8947128050,
-  "pending_parse": [
-    8947128050
-  ],
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,13 +10,13 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 82,
+      "games_together": 83,
       "losses_together": 37,
       "guilty_count": 5
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 48,
+      "games_together": 49,
       "losses_together": 23,
       "guilty_count": 15
     },
@@ -1068,19 +1066,19 @@
     },
     "1138627346": {
       "nickname": "✡︎Benjamin Netanyahu✡",
-      "games_together": 1,
+      "games_together": 2,
       "losses_together": 0,
       "guilty_count": 0
     },
     "1145137882": {
       "nickname": "Yappy Drilla",
-      "games_together": 1,
+      "games_together": 2,
       "losses_together": 0,
       "guilty_count": 0
     },
     "225700134": {
       "nickname": "poky",
-      "games_together": 1,
+      "games_together": 2,
       "losses_together": 0,
       "guilty_count": 0
     }
