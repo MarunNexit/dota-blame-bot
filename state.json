@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8947955106,
-  "pending_parse": [
-    8947991090
-  ],
+  "last_match_id": 8947991090,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,9 +10,9 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 88,
-      "losses_together": 41,
-      "guilty_count": 5
+      "games_together": 89,
+      "losses_together": 42,
+      "guilty_count": 6
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
@@ -1128,6 +1126,30 @@
     },
     "1674174170": {
       "nickname": "二度とない",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "141167987": {
+      "nickname": "VaYne",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "140122587": {
+      "nickname": "浩南",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1161668559": {
+      "nickname": "Vi Britannia",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "104787007": {
+      "nickname": "mancer",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -2812,6 +2834,47 @@
           "hero": "Lina",
           "role": "mid",
           "guilt_probability": 0.034083189529140245
+        }
+      ]
+    },
+    {
+      "match_id": 8947991090,
+      "guilty": 1132291240,
+      "players": [
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Skywrath Mage",
+          "role": "support_soft",
+          "guilt_probability": 0.4707586892489748
+        },
+        {
+          "account_id": 140122587,
+          "nickname": "浩南",
+          "hero": "Undying",
+          "role": "support_hard",
+          "guilt_probability": 0.2383340717291868
+        },
+        {
+          "account_id": 1161668559,
+          "nickname": "Vi Britannia",
+          "hero": "Phantom Lancer",
+          "role": "carry",
+          "guilt_probability": 0.1295271094595066
+        },
+        {
+          "account_id": 104787007,
+          "nickname": "mancer",
+          "hero": "Viper",
+          "role": "mid",
+          "guilt_probability": 0.09697046597635477
+        },
+        {
+          "account_id": 141167987,
+          "nickname": "VaYne",
+          "hero": "Doom",
+          "role": "offlane",
+          "guilt_probability": 0.06440966358597691
         }
       ]
     }
