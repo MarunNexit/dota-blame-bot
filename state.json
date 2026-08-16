@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8947838728,
-  "pending_parse": [
-    8947955106
-  ],
+  "last_match_id": 8947955106,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,8 +10,8 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 87,
-      "losses_together": 40,
+      "games_together": 88,
+      "losses_together": 41,
       "guilty_count": 5
     },
     "430827275": {
@@ -1106,6 +1104,30 @@
       "nickname": "ГРИМЛЬ",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "929077076": {
+      "nickname": "АУЕ БОГДАН",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "174471482": {
+      "nickname": "unnamed",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
+    },
+    "151330878": {
+      "nickname": "ネオ",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1674174170": {
+      "nickname": "二度とない",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -2747,6 +2769,47 @@
           "hero": "Underlord",
           "role": "mid",
           "guilt_probability": 0.014386812344160104
+        }
+      ]
+    },
+    {
+      "match_id": 8947955106,
+      "guilty": 174471482,
+      "players": [
+        {
+          "account_id": 174471482,
+          "nickname": "unnamed",
+          "hero": "Axe",
+          "role": "support_hard",
+          "guilt_probability": 0.6641977797443048
+        },
+        {
+          "account_id": 151330878,
+          "nickname": "ネオ",
+          "hero": "Undying",
+          "role": "support_soft",
+          "guilt_probability": 0.18205167429838282
+        },
+        {
+          "account_id": 929077076,
+          "nickname": "АУЕ БОГДАН",
+          "hero": "Faceless Void",
+          "role": "carry",
+          "guilt_probability": 0.08242776625937072
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Dazzle",
+          "role": "offlane",
+          "guilt_probability": 0.037239590168801455
+        },
+        {
+          "account_id": 1674174170,
+          "nickname": "二度とない",
+          "hero": "Lina",
+          "role": "mid",
+          "guilt_probability": 0.034083189529140245
         }
       ]
     }
