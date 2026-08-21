@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8958083180,
-  "pending_parse": [
-    8958134881
-  ],
+  "last_match_id": 8958134881,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,8 +10,8 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 96,
-      "losses_together": 46,
+      "games_together": 97,
+      "losses_together": 47,
       "guilty_count": 7
     },
     "430827275": {
@@ -1218,6 +1216,30 @@
     },
     "251122028": {
       "nickname": "ням ням",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "162328192": {
+      "nickname": "Зелеboba",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1110362434": {
+      "nickname": "stoic",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
+    },
+    "1217843777": {
+      "nickname": "๋Ipj I-Ye",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1903358865": {
+      "nickname": "игрок в компьютер",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -3107,6 +3129,47 @@
           "hero": "Death Prophet",
           "role": "offlane",
           "guilt_probability": 0.023088724042949975
+        }
+      ]
+    },
+    {
+      "match_id": 8958134881,
+      "guilty": 1110362434,
+      "players": [
+        {
+          "account_id": 1110362434,
+          "nickname": "stoic",
+          "hero": "Ogre Magi",
+          "role": "support_soft",
+          "guilt_probability": 0.5116087739462
+        },
+        {
+          "account_id": 1903358865,
+          "nickname": "игрок в компьютер",
+          "hero": "Bounty Hunter",
+          "role": "support_hard",
+          "guilt_probability": 0.2784485003119653
+        },
+        {
+          "account_id": 162328192,
+          "nickname": "Зелеboba",
+          "hero": "Sven",
+          "role": "carry",
+          "guilt_probability": 0.10448892992283894
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Underlord",
+          "role": "offlane",
+          "guilt_probability": 0.06605898319670696
+        },
+        {
+          "account_id": 1217843777,
+          "nickname": "๋Ipj I-Ye",
+          "hero": "Ember Spirit",
+          "role": "mid",
+          "guilt_probability": 0.03939481262228888
         }
       ]
     }
