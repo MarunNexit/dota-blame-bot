@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8956284940,
-  "pending_parse": [
-    8958083180
-  ],
+  "last_match_id": 8958083180,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,9 +10,9 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 95,
-      "losses_together": 45,
-      "guilty_count": 6
+      "games_together": 96,
+      "losses_together": 46,
+      "guilty_count": 7
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
@@ -1196,6 +1194,30 @@
       "nickname": "Ame king <3",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "311339847": {
+      "nickname": "LIl Yung Chief Big Plug",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "360365910": {
+      "nickname": "Андрей",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1052480837": {
+      "nickname": "blessed",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "251122028": {
+      "nickname": "ням ням",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -3042,6 +3064,47 @@
           "hero": "Undying",
           "role": "offlane",
           "guilt_probability": 0.06728135681379824
+        }
+      ]
+    },
+    {
+      "match_id": 8958083180,
+      "guilty": 1132291240,
+      "players": [
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Pudge",
+          "role": "support_hard",
+          "guilt_probability": 0.4493475671729077
+        },
+        {
+          "account_id": 1052480837,
+          "nickname": "blessed",
+          "hero": "Faceless Void",
+          "role": "carry",
+          "guilt_probability": 0.2023837187233461
+        },
+        {
+          "account_id": 251122028,
+          "nickname": "ням ням",
+          "hero": "Rubick",
+          "role": "support_soft",
+          "guilt_probability": 0.20145833198600663
+        },
+        {
+          "account_id": 311339847,
+          "nickname": "LIl Yung Chief Big Plug",
+          "hero": "Monkey King",
+          "role": "mid",
+          "guilt_probability": 0.12372165807478964
+        },
+        {
+          "account_id": 360365910,
+          "nickname": "Андрей",
+          "hero": "Death Prophet",
+          "role": "offlane",
+          "guilt_probability": 0.023088724042949975
         }
       ]
     }
