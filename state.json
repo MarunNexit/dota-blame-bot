@@ -1,19 +1,17 @@
 {
-  "last_match_id": 8967788263,
-  "pending_parse": [
-    8967822166
-  ],
+  "last_match_id": 8967822166,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 66,
-      "losses_together": 39,
-      "guilty_count": 5
+      "games_together": 67,
+      "losses_together": 40,
+      "guilty_count": 6
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 98,
-      "losses_together": 48,
+      "games_together": 99,
+      "losses_together": 49,
       "guilty_count": 7
     },
     "430827275": {
@@ -1260,6 +1258,24 @@
     },
     "772686018": {
       "nickname": "ztmr",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "134317748": {
+      "nickname": "olegi",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "113664370": {
+      "nickname": "вампир паркур",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "202893129": {
+      "nickname": "яблочько",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -3231,6 +3247,47 @@
           "hero": "Doom",
           "role": "offlane",
           "guilt_probability": 0.0702083726088695
+        }
+      ]
+    },
+    {
+      "match_id": 8967822166,
+      "guilty": 852680232,
+      "players": [
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Dazzle",
+          "role": "support_soft",
+          "guilt_probability": 0.45950227394661286
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Hoodwink",
+          "role": "support_hard",
+          "guilt_probability": 0.38135920603500273
+        },
+        {
+          "account_id": 113664370,
+          "nickname": "вампир паркур",
+          "hero": "Monkey King",
+          "role": "mid",
+          "guilt_probability": 0.0738856693006944
+        },
+        {
+          "account_id": 134317748,
+          "nickname": "olegi",
+          "hero": "Nature's Prophet",
+          "role": "carry",
+          "guilt_probability": 0.04860947454251001
+        },
+        {
+          "account_id": 202893129,
+          "nickname": "яблочько",
+          "hero": "Night Stalker",
+          "role": "offlane",
+          "guilt_probability": 0.036643376175179945
         }
       ]
     }
