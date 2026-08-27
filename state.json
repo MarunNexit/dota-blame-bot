@@ -1,19 +1,17 @@
 {
-  "last_match_id": 8958134881,
-  "pending_parse": [
-    8967788263
-  ],
+  "last_match_id": 8967788263,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 65,
-      "losses_together": 38,
+      "games_together": 66,
+      "losses_together": 39,
       "guilty_count": 5
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 97,
-      "losses_together": 47,
+      "games_together": 98,
+      "losses_together": 48,
       "guilty_count": 7
     },
     "430827275": {
@@ -1242,6 +1240,24 @@
     },
     "1903358865": {
       "nickname": "игрок в компьютер",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "386758284": {
+      "nickname": "Venator",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "846164772": {
+      "nickname": "TOWS",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
+    },
+    "772686018": {
+      "nickname": "ztmr",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -3172,6 +3188,47 @@
           "hero": "Ember Spirit",
           "role": "mid",
           "guilt_probability": 0.03939481262228888
+        }
+      ]
+    },
+    {
+      "match_id": 8967788263,
+      "guilty": 846164772,
+      "players": [
+        {
+          "account_id": 846164772,
+          "nickname": "TOWS",
+          "hero": "Venomancer",
+          "role": "support_soft",
+          "guilt_probability": 0.40882152130143634
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "role": "support_hard",
+          "guilt_probability": 0.288052424748354
+        },
+        {
+          "account_id": 772686018,
+          "nickname": "ztmr",
+          "hero": "Lina",
+          "role": "mid",
+          "guilt_probability": 0.13374697377048428
+        },
+        {
+          "account_id": 386758284,
+          "nickname": "Venator",
+          "hero": "Anti-Mage",
+          "role": "carry",
+          "guilt_probability": 0.09917070757085583
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Doom",
+          "role": "offlane",
+          "guilt_probability": 0.0702083726088695
         }
       ]
     }
