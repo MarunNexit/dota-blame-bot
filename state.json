@@ -1,18 +1,16 @@
 {
-  "last_match_id": 8974223200,
-  "pending_parse": [
-    8974339068
-  ],
+  "last_match_id": 8974339068,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 70,
+      "games_together": 71,
       "losses_together": 40,
       "guilty_count": 6
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 103,
+      "games_together": 104,
       "losses_together": 49,
       "guilty_count": 7
     },
@@ -84,7 +82,7 @@
     },
     "190406808": {
       "nickname": "Lokent",
-      "games_together": 34,
+      "games_together": 35,
       "losses_together": 18,
       "guilty_count": 2
     },
@@ -1344,6 +1342,18 @@
     },
     "889681068": {
       "nickname": "Renegade",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "921908300": {
+      "nickname": "Marine_tale0",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1088274673": {
+      "nickname": "I've to get strong.",
       "games_together": 1,
       "losses_together": 0,
       "guilty_count": 0
