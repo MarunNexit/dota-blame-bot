@@ -1,20 +1,18 @@
 {
-  "last_match_id": 8976626451,
-  "pending_parse": [
-    8976805151
-  ],
+  "last_match_id": 8976805151,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 81,
-      "losses_together": 45,
+      "games_together": 82,
+      "losses_together": 46,
       "guilty_count": 6
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 114,
-      "losses_together": 54,
-      "guilty_count": 8
+      "games_together": 115,
+      "losses_together": 55,
+      "guilty_count": 9
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
@@ -1479,6 +1477,24 @@
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 1
+    },
+    "921972240": {
+      "nickname": "Bismilya",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "370417829": {
+      "nickname": "мама ваш сын прекрасно болен",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1208273637": {
+      "nickname": "ronaldinho",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
     }
   },
   "history": [
@@ -3693,6 +3709,47 @@
           "hero": "Undying",
           "role": "mid",
           "guilt_probability": 0.025919725853061897
+        }
+      ]
+    },
+    {
+      "match_id": 8976805151,
+      "guilty": 1132291240,
+      "players": [
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Snapfire",
+          "role": "support_hard",
+          "guilt_probability": 0.3696659259504471
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "role": "support_soft",
+          "guilt_probability": 0.31842216715214805
+        },
+        {
+          "account_id": 921972240,
+          "nickname": "Bismilya",
+          "hero": "Pudge",
+          "role": "offlane",
+          "guilt_probability": 0.22326403545435194
+        },
+        {
+          "account_id": 370417829,
+          "nickname": "мама ваш сын прекрасно болен",
+          "hero": "Terrorblade",
+          "role": "carry",
+          "guilt_probability": 0.05515421992977692
+        },
+        {
+          "account_id": 1208273637,
+          "nickname": "ronaldinho",
+          "hero": "Void Spirit",
+          "role": "mid",
+          "guilt_probability": 0.03349365151327599
         }
       ]
     }
