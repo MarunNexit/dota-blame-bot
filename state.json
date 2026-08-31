@@ -1,18 +1,16 @@
 {
-  "last_match_id": 8976227954,
-  "pending_parse": [
-    8976363715
-  ],
+  "last_match_id": 8976363715,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 77,
+      "games_together": 78,
       "losses_together": 43,
       "guilty_count": 6
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 110,
+      "games_together": 111,
       "losses_together": 52,
       "guilty_count": 8
     },
@@ -1440,6 +1438,24 @@
     },
     "1602744589": {
       "nickname": "@MIR_2012",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1006699353": {
+      "nickname": "FomkaJulik",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1143579164": {
+      "nickname": "WW",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1155517714": {
+      "nickname": "Майор Допросов",
       "games_together": 1,
       "losses_together": 0,
       "guilty_count": 0
