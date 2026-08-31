@@ -1,25 +1,23 @@
 {
-  "last_match_id": 8975795590,
-  "pending_parse": [
-    8975885507
-  ],
+  "last_match_id": 8975885507,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 74,
-      "losses_together": 41,
+      "games_together": 75,
+      "losses_together": 42,
       "guilty_count": 6
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 107,
-      "losses_together": 50,
-      "guilty_count": 7
+      "games_together": 108,
+      "losses_together": 51,
+      "guilty_count": 8
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 59,
-      "losses_together": 29,
+      "games_together": 60,
+      "losses_together": 30,
       "guilty_count": 21
     },
     "358624926": {
@@ -1394,6 +1392,18 @@
       "nickname": "UM8RA",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1053732308": {
+      "nickname": "Борис Блант",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1137874840": {
+      "nickname": "Подобен господу",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -3445,6 +3455,47 @@
           "hero": "Clinkz",
           "role": "carry",
           "guilt_probability": 0.05375915088007195
+        }
+      ]
+    },
+    {
+      "match_id": 8975885507,
+      "guilty": 1132291240,
+      "players": [
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Pudge",
+          "role": "support_hard",
+          "guilt_probability": 0.45764663999062594
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "role": "support_soft",
+          "guilt_probability": 0.28934814551110727
+        },
+        {
+          "account_id": 1053732308,
+          "nickname": "Борис Блант",
+          "hero": "Drow Ranger",
+          "role": "carry",
+          "guilt_probability": 0.1675021290853978
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Sniper",
+          "role": "offlane",
+          "guilt_probability": 0.05926723594072874
+        },
+        {
+          "account_id": 1137874840,
+          "nickname": "Подобен господу",
+          "hero": "Lina",
+          "role": "mid",
+          "guilt_probability": 0.02623584947214031
         }
       ]
     }
