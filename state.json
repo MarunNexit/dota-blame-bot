@@ -1,19 +1,17 @@
 {
-  "last_match_id": 8976363715,
-  "pending_parse": [
-    8976442160
-  ],
+  "last_match_id": 8976442160,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 78,
-      "losses_together": 43,
+      "games_together": 79,
+      "losses_together": 44,
       "guilty_count": 6
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 111,
-      "losses_together": 52,
+      "games_together": 112,
+      "losses_together": 53,
       "guilty_count": 8
     },
     "430827275": {
@@ -1461,6 +1459,24 @@
       "games_together": 1,
       "losses_together": 0,
       "guilty_count": 0
+    },
+    "1045619476": {
+      "nickname": "73gre1n",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "220722386": {
+      "nickname": "Deny5s.",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1122868799": {
+      "nickname": "Star0",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
     }
   },
   "history": [
@@ -3593,6 +3609,47 @@
           "hero": "Dawnbreaker",
           "role": "offlane",
           "guilt_probability": 0.07040536024662
+        }
+      ]
+    },
+    {
+      "match_id": 8976442160,
+      "guilty": 1122868799,
+      "players": [
+        {
+          "account_id": 1122868799,
+          "nickname": "Star0",
+          "hero": "Ancient Apparition",
+          "role": "support_soft",
+          "guilt_probability": 0.39005316246208893
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "role": "support_hard",
+          "guilt_probability": 0.29369602937143796
+        },
+        {
+          "account_id": 1045619476,
+          "nickname": "73gre1n",
+          "hero": "Queen of Pain",
+          "role": "mid",
+          "guilt_probability": 0.15134358161919811
+        },
+        {
+          "account_id": 220722386,
+          "nickname": "Deny5s.",
+          "hero": "Drow Ranger",
+          "role": "carry",
+          "guilt_probability": 0.11259245358990301
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Pudge",
+          "role": "offlane",
+          "guilt_probability": 0.05231477295737207
         }
       ]
     }
