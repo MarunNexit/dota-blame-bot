@@ -1,19 +1,17 @@
 {
-  "last_match_id": 8975885507,
-  "pending_parse": [
-    8976143308
-  ],
+  "last_match_id": 8976143308,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 75,
-      "losses_together": 42,
+      "games_together": 76,
+      "losses_together": 43,
       "guilty_count": 6
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 108,
-      "losses_together": 51,
+      "games_together": 109,
+      "losses_together": 52,
       "guilty_count": 8
     },
     "430827275": {
@@ -1404,6 +1402,24 @@
     },
     "1137874840": {
       "nickname": "Подобен господу",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "117204209": {
+      "nickname": "ENDKONSUMENT",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "71948235": {
+      "nickname": "el Jardinero #aimunfall",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
+    },
+    "198077506": {
+      "nickname": "radu",
       "games_together": 1,
       "losses_together": 1,
       "guilty_count": 0
@@ -3498,6 +3514,47 @@
           "hero": "Lina",
           "role": "mid",
           "guilt_probability": 0.02623584947214031
+        }
+      ]
+    },
+    {
+      "match_id": 8976143308,
+      "guilty": 71948235,
+      "players": [
+        {
+          "account_id": 71948235,
+          "nickname": "el Jardinero #aimunfall",
+          "hero": "Lich",
+          "role": "support_soft",
+          "guilt_probability": 0.43313034287648394
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Ogre Magi",
+          "role": "support_hard",
+          "guilt_probability": 0.3400200380224348
+        },
+        {
+          "account_id": 198077506,
+          "nickname": "radu",
+          "hero": "Void Spirit",
+          "role": "mid",
+          "guilt_probability": 0.08178723183074776
+        },
+        {
+          "account_id": 117204209,
+          "nickname": "ENDKONSUMENT",
+          "hero": "Luna",
+          "role": "carry",
+          "guilt_probability": 0.07465702702371355
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Dawnbreaker",
+          "role": "offlane",
+          "guilt_probability": 0.07040536024662
         }
       ]
     }
