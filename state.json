@@ -1,26 +1,24 @@
 {
-  "last_match_id": 8976442160,
-  "pending_parse": [
-    8976574780
-  ],
+  "last_match_id": 8976574780,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 79,
-      "losses_together": 44,
+      "games_together": 80,
+      "losses_together": 45,
       "guilty_count": 6
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 112,
-      "losses_together": 53,
+      "games_together": 113,
+      "losses_together": 54,
       "guilty_count": 8
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 60,
-      "losses_together": 30,
-      "guilty_count": 21
+      "games_together": 61,
+      "losses_together": 31,
+      "guilty_count": 22
     },
     "358624926": {
       "nickname": "oпep yпaл нaмoчeнный",
@@ -84,14 +82,14 @@
     },
     "190406808": {
       "nickname": "Lokent",
-      "games_together": 37,
-      "losses_together": 19,
+      "games_together": 38,
+      "losses_together": 20,
       "guilty_count": 3
     },
     "257278885": {
       "nickname": "Arukdelon",
-      "games_together": 28,
-      "losses_together": 16,
+      "games_together": 29,
+      "losses_together": 17,
       "guilty_count": 3
     },
     "110461402": {
@@ -3652,6 +3650,47 @@
           "hero": "Pudge",
           "role": "offlane",
           "guilt_probability": 0.05231477295737207
+        }
+      ]
+    },
+    {
+      "match_id": 8976574780,
+      "guilty": 430827275,
+      "players": [
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Venomancer",
+          "role": "support_soft",
+          "guilt_probability": 0.5361163444649422
+        },
+        {
+          "account_id": 257278885,
+          "nickname": "Arukdelon",
+          "hero": "Luna",
+          "role": "carry",
+          "guilt_probability": 0.27319212403679655
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Dazzle",
+          "role": "support_hard",
+          "guilt_probability": 0.11281701580938162
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Centaur Warrunner",
+          "role": "offlane",
+          "guilt_probability": 0.05195478983581783
+        },
+        {
+          "account_id": 190406808,
+          "nickname": "Lokent",
+          "hero": "Undying",
+          "role": "mid",
+          "guilt_probability": 0.025919725853061897
         }
       ]
     }
