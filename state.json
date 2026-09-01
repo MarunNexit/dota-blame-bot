@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8976805151,
-  "pending_parse": [
-    8976840543
-  ],
+  "last_match_id": 8976840543,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,7 +10,7 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 115,
+      "games_together": 116,
       "losses_together": 55,
       "guilty_count": 9
     },
@@ -1496,6 +1494,30 @@
       "nickname": "ronaldinho",
       "games_together": 1,
       "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1017786430": {
+      "nickname": "Miracle.~",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "258144619": {
+      "nickname": "Billy Tommygun",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1076639091": {
+      "nickname": "Быдлан",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1840596319": {
+      "nickname": "КАРАМЕЛЬНЫЙ АНУС",
+      "games_together": 1,
+      "losses_together": 0,
       "guilty_count": 0
     }
   },
