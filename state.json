@@ -1,25 +1,23 @@
 {
-  "last_match_id": 8976875001,
-  "pending_parse": [
-    8977752572
-  ],
+  "last_match_id": 8977752572,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 82,
-      "losses_together": 46,
-      "guilty_count": 6
+      "games_together": 83,
+      "losses_together": 47,
+      "guilty_count": 7
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 117,
-      "losses_together": 55,
+      "games_together": 118,
+      "losses_together": 56,
       "guilty_count": 9
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 62,
-      "losses_together": 31,
+      "games_together": 63,
+      "losses_together": 32,
       "guilty_count": 22
     },
     "358624926": {
@@ -84,14 +82,14 @@
     },
     "190406808": {
       "nickname": "Lokent",
-      "games_together": 39,
-      "losses_together": 20,
+      "games_together": 40,
+      "losses_together": 21,
       "guilty_count": 3
     },
     "257278885": {
       "nickname": "Arukdelon",
-      "games_together": 30,
-      "losses_together": 17,
+      "games_together": 31,
+      "losses_together": 18,
       "guilty_count": 3
     },
     "110461402": {
@@ -3800,6 +3798,47 @@
           "hero": "Void Spirit",
           "role": "mid",
           "guilt_probability": 0.03349365151327599
+        }
+      ]
+    },
+    {
+      "match_id": 8977752572,
+      "guilty": 852680232,
+      "players": [
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Shadow Shaman",
+          "role": "support_soft",
+          "guilt_probability": 0.4672065040455637
+        },
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Dark Willow",
+          "role": "support_hard",
+          "guilt_probability": 0.29717164504505816
+        },
+        {
+          "account_id": 257278885,
+          "nickname": "Arukdelon",
+          "hero": "Bristleback",
+          "role": "offlane",
+          "guilt_probability": 0.09397579471322963
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Drow Ranger",
+          "role": "carry",
+          "guilt_probability": 0.08555352982503926
+        },
+        {
+          "account_id": 190406808,
+          "nickname": "Lokent",
+          "hero": "Ancient Apparition",
+          "role": "mid",
+          "guilt_probability": 0.05609252637110922
         }
       ]
     }
