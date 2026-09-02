@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8978447177,
-  "pending_parse": [
-    8978470695
-  ],
+  "last_match_id": 8978470695,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,8 +10,8 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 121,
-      "losses_together": 57,
+      "games_together": 122,
+      "losses_together": 58,
       "guilty_count": 9
     },
     "430827275": {
@@ -1593,6 +1591,30 @@
       "games_together": 1,
       "losses_together": 0,
       "guilty_count": 0
+    },
+    "1178965512": {
+      "nickname": "!gdfgqwzxvcghv",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "197263549": {
+      "nickname": "Адекватный",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "921320311": {
+      "nickname": "IVOXYGEN",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 0
+    },
+    "1012558413": {
+      "nickname": "лето",
+      "games_together": 1,
+      "losses_together": 1,
+      "guilty_count": 1
     }
   },
   "history": [
@@ -3930,6 +3952,47 @@
           "hero": "Shadow Fiend",
           "role": "carry",
           "guilt_probability": 0.06409790701002738
+        }
+      ]
+    },
+    {
+      "match_id": 8978470695,
+      "guilty": 1012558413,
+      "players": [
+        {
+          "account_id": 1012558413,
+          "nickname": "лето",
+          "hero": "Bounty Hunter",
+          "role": "support_hard",
+          "guilt_probability": 0.7078989599919497
+        },
+        {
+          "account_id": 1178965512,
+          "nickname": "!gdfgqwzxvcghv",
+          "hero": "Night Stalker",
+          "role": "offlane",
+          "guilt_probability": 0.16970777977212456
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Dazzle",
+          "role": "support_soft",
+          "guilt_probability": 0.05565874152166196
+        },
+        {
+          "account_id": 197263549,
+          "nickname": "Адекватный",
+          "hero": "Juggernaut",
+          "role": "carry",
+          "guilt_probability": 0.049469427528465955
+        },
+        {
+          "account_id": 921320311,
+          "nickname": "IVOXYGEN",
+          "hero": "Storm Spirit",
+          "role": "mid",
+          "guilt_probability": 0.017265091185797856
         }
       ]
     }
