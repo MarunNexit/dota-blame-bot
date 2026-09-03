@@ -1,26 +1,24 @@
 {
-  "last_match_id": 8979846458,
-  "pending_parse": [
-    8981124102
-  ],
+  "last_match_id": 8981124102,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
-      "games_together": 85,
-      "losses_together": 48,
+      "games_together": 86,
+      "losses_together": 49,
       "guilty_count": 7
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 125,
-      "losses_together": 58,
+      "games_together": 126,
+      "losses_together": 59,
       "guilty_count": 9
     },
     "430827275": {
       "nickname": "Гур Мик Мик",
-      "games_together": 65,
-      "losses_together": 33,
-      "guilty_count": 23
+      "games_together": 66,
+      "losses_together": 34,
+      "guilty_count": 24
     },
     "358624926": {
       "nickname": "oпep yпaл нaмoчeнный",
@@ -84,8 +82,8 @@
     },
     "190406808": {
       "nickname": "Lokent",
-      "games_together": 42,
-      "losses_together": 22,
+      "games_together": 43,
+      "losses_together": 23,
       "guilty_count": 3
     },
     "257278885": {
@@ -1664,6 +1662,12 @@
       "nickname": "Чебупелька",
       "games_together": 1,
       "losses_together": 0,
+      "guilty_count": 0
+    },
+    "916108842": {
+      "nickname": "Quaternion.identity",
+      "games_together": 1,
+      "losses_together": 1,
       "guilty_count": 0
     }
   },
@@ -4043,6 +4047,47 @@
           "hero": "Storm Spirit",
           "role": "mid",
           "guilt_probability": 0.017265091185797856
+        }
+      ]
+    },
+    {
+      "match_id": 8981124102,
+      "guilty": 430827275,
+      "players": [
+        {
+          "account_id": 430827275,
+          "nickname": "Гур Мик Мик",
+          "hero": "Techies",
+          "role": "support_hard",
+          "guilt_probability": 0.47288626485601637
+        },
+        {
+          "account_id": 852680232,
+          "nickname": "dodepchik",
+          "hero": "Witch Doctor",
+          "role": "support_soft",
+          "guilt_probability": 0.17624431042795435
+        },
+        {
+          "account_id": 1132291240,
+          "nickname": "Dota Маряна",
+          "hero": "Pudge",
+          "role": "carry",
+          "guilt_probability": 0.15948905976391187
+        },
+        {
+          "account_id": 190406808,
+          "nickname": "Lokent",
+          "hero": "Sand King",
+          "role": "mid",
+          "guilt_probability": 0.0973730905272956
+        },
+        {
+          "account_id": 916108842,
+          "nickname": "Quaternion.identity",
+          "hero": "Legion Commander",
+          "role": "offlane",
+          "guilt_probability": 0.09400727442482178
         }
       ]
     }
