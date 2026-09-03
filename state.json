@@ -1,8 +1,6 @@
 {
-  "last_match_id": 8979811241,
-  "pending_parse": [
-    8979846458
-  ],
+  "last_match_id": 8979846458,
+  "pending_parse": [],
   "players": {
     "852680232": {
       "nickname": "dodepchik",
@@ -12,7 +10,7 @@
     },
     "1132291240": {
       "nickname": "Dota Маряна",
-      "games_together": 124,
+      "games_together": 125,
       "losses_together": 58,
       "guilty_count": 9
     },
@@ -1638,6 +1636,30 @@
     },
     "167040260": {
       "nickname": "VR",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1042459797": {
+      "nickname": "Хомяк",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "158201334": {
+      "nickname": "Czar",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "383226244": {
+      "nickname": "a1zek",
+      "games_together": 1,
+      "losses_together": 0,
+      "guilty_count": 0
+    },
+    "1060033535": {
+      "nickname": "Чебупелька",
       "games_together": 1,
       "losses_together": 0,
       "guilty_count": 0
